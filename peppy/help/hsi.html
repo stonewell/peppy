@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Hyperspectral Image Major Mode</title>
+
+
+
+
+</head>
+<body>
+<div id="titleLine">
+<a href="http://peppy.flipturn.org/"><img src="_static/peppy-web-logo.png" alt="peppy - (ap)Proximated (X)Emacs Powered by Python" /></a>
+</div>
+<table><tr><td width="50%"><p><a href="index.html">Peppy 0.13.4 User Manual</a> &raquo;</p></td><td width="50%" align="right"><p>
+<a href="hexedit.html" title="HexEdit Major Mode" accesskey="P">previous</a> |
+<a href="genindex.html" title="General Index" accesskey="I">index</a></p></td></tr></table>
+<a name="hyperspectral-image-major-mode">
+<a name="hsi"></a><h1>Hyperspectral Image Major Mode</h1>
+<a name="what-is-hyperspectral-imagery"></a>
+<h2>What is Hyperspectral Imagery?</h2>
+<p>Commonly used in remote sensing applications, hyperspectral images have many
+more &#8220;colors&#8221; than just red, green, and blue.  Typically, the images are
+structured in layers called &#8220;bands&#8221;, where each band represents a specific
+wavelength of light.  You can think of them as a stack of grayscale images,
+one on top of the other, where each image in the stack is looking at the same
+field of view, but at a different wavelength of light.</p>
+<p>Because each pixel at the same row and column in the band refers to the same
+spot on the ground, each pixel can be associated with a spectrum.  Because
+there can be hundreds of bands in an image, the spectrum can be quite high
+resolution.  Because of the large number of samples in the spectrum, the
+spectrum can be used to identify the material(s) in the pixel.</p>
+<p>The Federation of American Scientists has a <a class="reference" href='href="http://www.fas.org/irp/imint/docs/rst/index.html'>good tutorial</a>
+about remote sensing, and it includes sections about hyperspectral imagery.</p>
+<a name="hyperspectral-image-data"></a>
+<h3>Hyperspectral Image Data</h3>
+<p>Hyperspectral images are very large, typically on the order of hundreds of
+megabytes for a standard scene.  Most data comes from either government or
+commercial sensors mounted on either aircraft or spacecraft.  NASA&#8217;s <a class="reference" href="http://aviris.jpl.nasa.gov/">AVIRIS
+sensor</a> is very well known in the field of
+earth remote sensing.</p>
+<p>There are many different image formats for hyperspectral images, but they
+fall in two general categories: raw and compressed.  peppy doesn&#8217;t support
+compressed formats directly; you must use GDAL to load compressed images like
+copressed NITF, ECW, jpeg2000, etc.</p>
+<a name="raw-formats"></a>
+<h4>Raw Formats</h4>
+<p>A common raw image format is the ENVI format, which consists of two files: a
+data file in a raw format, and a header file that describes the type of data.</p>
+<p>ENVI format is currently the only type of format supported in peppy without
+extra libraries.</p>
+
+<a name="compressed-formats-and-gdal"></a>
+<h4>Compressed Formats and GDAL</h4>
+<p><a class="reference" href="http://www.gdal.org/">GDAL</a> is a C++ library with a python binding
+that supports many different file formats through one API.  Note that peppy
+only supports the ngpython bindings of GDAL, available by default starting
+with GDAL 1.5.</p>
+<p>In addition, the libecw2 library from <a class="reference" href='href="http://www.ermapper.com/"'>ERMapper</a> can be used to support stand-alone
+JPEG2000 images and JPEG2000 images embedded in other formats like NITF.</p>
+
+
+<a name="sample-images"></a>
+<h3>Sample Images</h3>
+<dl class="docutils">
+<dt>ENVI</dt>
+<dd><a class="reference" href="http://aviris.jpl.nasa.gov/html/aviris.freedata.html">AVIRIS</a></dd>
+<dt>GDAL (with libecw2)</dt>
+<dd>jpeg2000: <a class="reference" href="http://www.microimages.com/gallery/jp2/">MicroImages JPEG2000 image gallery</a>
+<dd><p>ECW: <a class="reference" href="http://www.mcelhanney.com/products/prod_swo_samples.html">McElhanney sample images</a></p></dd>
+</dd>
+</dl>
+
+
+<a name="hyperspectral-images-in-peppy"></a>
+<h2>Hyperspectral Images in Peppy</h2>
+<p>The HSI mode in peppy provides simple capability to view hyperspectral images,
+navigate through the available bands, and show various profile and spectrum
+plots.</p>
+<p>Because of the extremely large size of hypespectral images, peppy is capable
+of viewing images much larger than can reside in physical memory.  It uses the
+technique of memory mapping to accomplish this.</p>
+
+<a name="starting-hsi-mode"></a>
+<h2>Starting HSI Mode</h2>
+
+<a name="changing-view-parameters"></a>
+<h2>Changing View Parameters</h2>
+
+<a name="using-profile-plots"></a>
+<h2>Using Profile Plots</h2>
+
+
+</a>
+<table><tr><td width="50%"><p><a href="index.html">Peppy 0.13.4 User Manual</a> &raquo;</p></td><td width="50%" align="right"><p>
+<a href="hexedit.html" title="HexEdit Major Mode">previous</a> |
+<a href="genindex.html" title="General Index">index</a></p></td></tr></table>
+<div class="footer">
+Updated 12 Nov 2009 by Rob McMullen &lt;robm at flipturn.org&gt;
+</div>
+</body>
+</html>

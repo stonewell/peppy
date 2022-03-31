@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Projects</title>
+
+
+
+
+
+</head>
+<body>
+<div id="titleLine">
+<a href="http://peppy.flipturn.org/"><img src="_static/peppy-web-logo.png" alt="peppy - (ap)Proximated (X)Emacs Powered by Python" /></a>
+</div>
+<table><tr><td width="50%"><p><a href="index.html">Peppy 0.16.0 User Manual</a> &raquo;</p></td><td width="50%" align="right"><p>
+<a href="macros.html" title="Macros *" accesskey="P">previous</a> |
+<a href="Search.html" title="Search Mode" accesskey="N">next</a> |
+<a href="genindex.html" title="General Index" accesskey="I">index</a></p></td></tr></table>
+<a name="projects">
+<h1>Projects</h1>
+<a name="peppy-s-concept-of-projects"></a>
+<a name="id1"></a><h2>Peppy&#8217;s Concept of Projects</h2>
+<p>Peppy uses a very simple definition of projects based on directories.
+Any directory can be considered as the top level of a project, including
+directories residing in other projects.  Peppy determines membership in a
+project by starting at the source file and marching upwards through the path
+until it finds a special marker than indicates the directory is a project.
+By default, this marker is a special directory at the root of the project
+directory called &#8216;.peppy-project&#8217;.</p>
+<p>Features available in projects include source code control operations like
+viewing the status of files and committing changes, template files used to
+generate boilerplate text for newly created files, and menu and toolbar items
+to control the build process and to run the application.</p>
+
+<a name="setting-up-projects"></a>
+<h2>Setting Up Projects</h2>
+<p>You can either create a new project from within peppy, or tell peppy about an
+existing project.</p>
+<a name="new-projects"></a>
+<h3>New Projects</h3>
+<p>Choose the File -&gt; New -&gt; Project...  menu item to create a new project
+directory.  Use this when starting a project from scratch.</p>
+<p>A dialog box will appear allowing you to chose where to place the new
+directory, and after selecting that will show the project configuration dialog
+allowing you to set some project specific options.</p>
+
+<a name="existing-projects"></a>
+<h3>Existing Projects</h3>
+<p>If you have an existing project in a directory, you can tell peppy about it
+by using th File -&gt; New -&gt; Project From Existing Code...  menu item.  This
+also prompts for a directory, but this time it is looking for you to enter
+an existing directory.  After entering the directory, it continues on to the
+project configuration dialog.</p>
+
+<a name="project-configuration-dialog"></a>
+<h3>Project Configuration Dialog</h3>
+<div align="center" class="align-center"><p></p><img alt="_images/peppy-project-configuration-dialog.png" class="align-center" src="_images/peppy-project-configuration-dialog.png" /></div>
+<p>This dialog contains two tabs, one showing the configuration information
+for this project and the other containing global settings that apply to all
+projects.</p>
+
+
+<a name="source-code-control"></a>
+<h2>Source Code Control</h2>
+<p>Most projects will be using some form of source code management system to keep
+track of changes.  (If your project doesn&#8217;t use source control, you should
+consider it strongly!) Peppy currently supports Git, SVN, Bzr, and CVS systems.</p>
+<p>Peppy displays some source control information in the Projects
+springtab, showing the current status of each file in a project.</p>
+
+<a name="templates"></a>
+<h2>Templates</h2>
+<p>Templates are boilerplate code that will be inserted when creating a new file
+of a specific type.  There are two classes of templates, global templates
+that don&#8217;t depend on a project, and project templates that apply only to the
+specific project that you&#8217;re using.  Global templates are stored in the peppy
+configuration directory, while project templates are stored within the project
+directory.</p>
+<p>Note that project templates override global templates, so creating a file within
+a project directory will use the project template instead of the global one.</p>
+<a name="creating-templates"></a>
+<h3>Creating Templates</h3>
+<p>Templates are associated with major modes.  Creating a template begins with
+deciding what major mode to use.  After creating some source code in that
+major mode, you can either save it as a global template or as a project
+template using the Project -&gt; Templates menu item.  Note that the template
+will only be associated with that major mode and not subclasses of the major
+mode.  So, for instance, a template for FundamentalMode will not be used when
+creating a new PythonMode file.</p>
+
+
+<a name="building"></a>
+<h2>Building</h2>
+<p>A build command can be associated with the project using the project
+configuration dialog.  Only after entering a command with the Project -&gt;
+Build...  menu item (and associated toolbar icon) be active.</p>
+<p>You can specify the build directory using the project settings dialog.  This
+directory can be an absolute directory, or can be relative to the project
+directory.</p>
+<p>In general, this only applies to projects using compiled languages like C, C++,
+or java.  Any messages output by the build process will be displayed in an
+output sidebar.</p>
+
+<a name="running"></a>
+<h2>Running</h2>
+<p>You can also associate an executable with the project that will allow you
+to test the program using the Project -&gt; Run...  menu item (and associated
+toolbar icon).  As with the build process, you can specify the directory in
+which the executable will be run, and any command line arguments.</p>
+
+<a name="ctags-support"></a>
+<h2>CTAGS Support</h2>
+<p>Peppy uses the <a class="reference external" href="http://ctags.sourceforge.net/">Exuberant CTAGS</a> program to generate cross references among
+the source files within the project.  Installing this program will provide a
+context menu entry when you right click on a syntax element in the source code:</p>
+<div align="center" class="align-center"><p></p><img alt="_images/peppy-ctags-context-menu.png" class="align-center" src="_images/peppy-ctags-context-menu.png" /></div>
+<p>Selecting the cross reference will cause peppy to load the referenced file (or
+switch tabs to the file if it&#8217;s already loaded) and jump to the line number of
+the reference.</p>
+<p>Currently, the tags file must be kept up to date manually.  Select the Project
+-&gt; Rebuild Tag File menu option to recreate it.</p>
+
+
+</a>
+<table><tr><td width="50%"><p><a href="index.html">Peppy 0.16.0 User Manual</a> &raquo;</p></td><td width="50%" align="right"><p>
+<a href="macros.html" title="Macros *">previous</a> |
+<a href="Search.html" title="Search Mode">next</a> |
+<a href="genindex.html" title="General Index">index</a></p></td></tr></table>
+<div class="footer">
+Updated 24 Feb 2011 by Rob McMullen &lt;robm at flipturn.org&gt;
+</div>
+</body>
+</html>

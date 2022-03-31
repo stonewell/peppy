@@ -1,0 +1,752 @@
+2011-02-24  Rob McMullen  <robm@users.sourceforge.net>
+
+	* Released peppy-0.16.0 "Big Smile"
+	* added search mode including text and numeric search (bug #866)
+	* added 'Remove Blank Lines' command
+	* fixed bug scanning files with non ascii encoding
+	* converted euclidean distance/spectral angle mapper to threads
+	* added busy indicator (throbber) to tab
+	* improved formatting for TextMode printing
+	* fixed load error on files without encoding (bug #865)
+	* refactored Graphviz major mode
+	* fixed fill paragraph for Fortran 77 comments
+
+2010-08-18  Rob McMullen  <robm@users.sourceforge.net>
+
+	* Released peppy-0.15.0 "Hilbert's Hotel"
+	* added detection of bad layout.dat file (bug #847)
+	* correct major mode found when multiple extensions match (bug #844)
+	* changed process manager to use threads (bug #842)
+	* fixed improperly closed sidebar/springtab instances (bug #841)
+	* added improvements to Fortran 77 autoindenter
+	* fixed regression in revert file (bug #839)
+	* fixed bug in Replace All (bug #833)
+	* added detection of unicode byte order marks (bug #835)
+	* fixed spell checker to handle English contractions (bug #781)
+	* 'find' and 'replace with' fields can now be swapped (bug #845)
+	* fixed error on shutdown when minibuffer open (bug #850)
+	* minor keybinding major mode fixes (bugs #731, #754, #852)
+
+2010-02-08  Rob McMullen  <robm@users.sourceforge.net>
+
+	* Released peppy-0.14.2
+	* full-fledged autoindenter for Fortran 77 (bug #805)
+	* changed sftp support to keep channel open (bug #826)
+	* added workarounds for enchant library problems (bug #822)
+	* fixed pubsub bugs resulting from not removing subscribers (bug #816)
+	* fixed bug with deprecated params in preferences (bug #824)
+	* updated i18n tranlations
+
+2010-01-18  Rob McMullen  <robm@users.sourceforge.net>
+
+	* Released peppy-0.14.1
+	* added experimental sftp support for network file access (bug #820)
+	* fixed tab character problem in ChangeLog and Makefile modes (bug #812)
+	* fixed statusbar to show i18n messages instead of always English
+	* added context menu to notebook tab background area (bug #819)
+	* added context menu to open documents from same project (bug #818)
+	* updated i18n tranlations
+
+2009-12-21  Rob McMullen  <robm@users.sourceforge.net>
+
+	* Released peppy-0.14.0 "Solstice"
+	* fixed code explorer refreshing in minor mode (IDE mode) (bug #761)
+	* changed AUI to Andrea Gavana's agw.aui rather than wxPython native AUI
+	* fixed notebook tab ordering problems (bug #669, #807)
+	* minor mode layouts are now saved allowing restoration of the editing
+	window layout when restarting the editor (bug #806)
+	* fixed autosave bug when file was locked by another process (bug #637)
+	* fixed bug preventing deletion of multiple macros
+	* added new i18n syncing with launchpad
+	* fixed SelectAll that failed copying to primary selection (bug #739)
+
+2009-12-02  Rob McMullen  <robm@users.sourceforge.net>
+
+	* Released peppy-0.13.3
+	* Fixed error preventing usage of text styles dialog (bug #802)
+
+2009-11-30  Rob McMullen  <robm@users.sourceforge.net>
+
+	* Released peppy-0.13.2
+	* added ability to modify language keywords in preferences (bug #801)
+	* fixed breakage in regex replace (bug #799)
+	* fixed bug when trying to display help for replacebar (bug #800)
+
+2009-11-16  Rob McMullen  <robm@users.sourceforge.net>
+
+	* Released peppy-0.13.1
+	* now includes PDF of user manual
+	* fixed replace to stop after wrapping around to start (bug #471)
+	* fixed bug when searching for non-existent CTAG (bug #753)
+	* fixed bug in help browser when doc doesn't exist (bug #797)
+	* added m4 major mode
+	* fixed bug in bash-style completion (bug #796)
+	* changed version numbering scheme to incremental minor numbers rather
+	than git-based minor numbers
+
+2009-11-11  Rob McMullen  <robm@users.sourceforge.net>
+
+	* Released peppy-0.13.0 "Odyssey and Aquarius"
+	* added help viewer and included htmlhelp version of user manual
+	* added experimental webdav support for network file access (bug #230)
+	* added insert file action (bug #430)
+	* added copy of user manual to peppy (bug #787)
+	* added reStructuredText mode
+	* fixed bug in STC highlight color logic (bug #789)
+	* changed list mode to use alternating background colors
+	* added printing support for list mode and dired mode
+	* fixed bug where files were getting opened twice during load (bug #792)
+	* fixed GTK keystroke for undo/redo actions (bug #764)
+	* fixed reindent bug in Makefile mode (bug #784)
+	* fixed bug in project settings dialog (bug #794)
+
+2009-10-01  Rob McMullen  <robm@users.sourceforge.net>
+
+	* Released peppy-0.12.19
+	* added printing and print preview support
+	* fixed install problems on windows (bug #782)
+
+2009-09-26  Rob McMullen  <robm@users.sourceforge.net>
+
+	* Released peppy-0.12.0 "Mars Ice"
+	* added new major modes to correspond with editra languages (bug #776)
+	* customizable major mode filename extensions now available in
+	preferences (bug #766)
+	* fixed bug in spell checker that causes freezes when deleting large
+	blocks of text (bug #775)
+	* fixed style editor in py2exe (bug #774)
+	* restructured Major Mode menu to prefer display of common major modes
+	rather than all major modes (bug #771)
+
+2009-09-21  Rob McMullen  <robm@users.sourceforge.net>
+
+	* Released peppy-0.11.53
+	* improved spell checking to correct words on cursor move (bug #767)
+	* added profiles for running scripts with different interpreter versions
+	(bug #765)
+	* added array storage for parameters in INI file
+	* added support for ENVI spectral libraries in hyperspectral mode
+	* added preference to support X11 middle mouse paste (but due to bugs
+	in the wxWidgets C++ code, won't be correctly resolved until wx 3.0)
+
+2009-08-22  Rob McMullen  <robm@users.sourceforge.net>
+
+	* Released peppy-0.11.23
+	* fixed crash when loading corrupted preference files (bug #759)
+	* fixed incorrect error reporting when mode creation failed (bug #760)
+
+2009-08-20  Rob McMullen  <robm@users.sourceforge.net>
+
+	* Released peppy-0.11.18
+	* fixed modifier key specification in keybinding mode (bug #751)
+	* join lines now joins line and next line when no selection (bug #752)
+	* text transforms now check to see if text was actually modified
+	before marking file as changed (bug #755)
+	* fixed bug when recording macros from menu bar (bug #756)
+	* fixed bug when renaming macros (bug #757)
+	* fixed bug where Add New ChangeLog Entry disappeared (bug #758)
+
+2009-08-16  Rob McMullen  <robm@users.sourceforge.net>
+
+	* Released peppy-0.11.7
+	* updated i18n from LaunchPad translations
+	* fixed i18n language selection on SUSE linux (bug #749)
+	* fixed automated build problem (bug #748)
+	* fixed style sheets for Sphinx docs
+	* added initial website documentation for macros
+
+2009-08-13  Rob McMullen  <robm@users.sourceforge.net>
+
+	* Released peppy-0.11 "Macroeconomics"
+	* added macros including automatic recording of keystrokes and actions
+	* added macro list that shows macros available for current mode
+	* added macro list sidebar that shows all macros (bug #735)
+	* automatically save macros when quitting session
+	* added recent macro list (bug #701)
+	* added keystroke binding for most recent macro (bug #745)
+	* added minibuffer to execute macro by name (bug #730)
+	* fixed bug when repeating macros using prefix argument keystrokes (bug #746)
+	* fixed crash in project viewer on windows (bug #740)
+	* added multiple keybinding assignments in keybinding editor (bug #728)
+	* can now remove/rename projects in project sidebar (bug #587)
+	* fixed python mode reindent bug when comment chars appeared after colon (bug #717)
+	* fixed bug in Insert Raw Character (bug #706)
+	* fixed refresh bug in dired mode (bug #711)
+	* fixed hyperspectral image load for files > 2GB (bug #737)
+	* added check for valid CTAGS executable in project settings (bug #727)
+	* fixed regression in spell checking speed (bug #725)
+	* added reStructuredText support for TextMode code explorer (bug #741)
+	* added some more emacs compatibility commands (bug #733)
+
+2009-06-11  Rob McMullen  <robm@users.sourceforge.net>
+
+	* Released peppy-0.10 "Free Repeater"
+	* new keyboard processing allowing quoted and repeated characters in
+	minibuffer as well as main text
+	* Control key can now be used as modifier key on OS X
+	* emacs keybinding mode on OS X now combines OS X and emacs keybindings
+	* added project/SCM support with basic integration with CVS, SVN, GIT,
+	BZR, and HG configuration control systems
+	* added templates to supply boilerplate text for new files in projects
+	* added CTAGS support for projects
+	* added user interface to change keybindings
+	* removed splash screen by default as it slowed down init by 2x
+	* added list of plugins to about:peppy page
+	* now automatically determines major mode when saving blank file
+	* fixed delay in opening/closing windows with multiple tabs
+
+2009-05-14  Rob McMullen  <robm@users.sourceforge.net>
+
+	* Released peppy-0.9.86 "Spring Cleaning"
+	* fixed issues with sidebars not working in springtab popups
+	* fixed script start issues
+	* fixed reverse interactive search that wasn't checking for invalid string
+	* fixed text extent problem on Mac OS X
+	* added "ignore reoccurrences" option in crash dialog
+	* added WholeWordSearch option from karbas.livejournal.com
+
+2009-04-20  Rob McMullen  <robm@users.sourceforge.net>
+
+	* Released peppy-0.9.27 "Spring Cleaning"
+	* much better Mac OS X integration
+	* OS X menubar now available when no windows are open
+	* added typical OS X Window menu functions
+	* added ability to define multiple keybindings for the same action
+	* fixed bugs in C++ class browser
+	* many bug fixes to hyperspectral image display mode
+	* improved error handling during major mode creation
+	* standardized interactive search to work like Firefox
+	* changed HexEdit mode to use new STCBinaryMixin
+	* fixed some missing emacs keybindings
+	* added emacs style transpose-chars and transpose-line-down functions
+	* added autosave after a user-configurable number of keystrokes
+	* added prompt to restore from autosave if autosave is newer than file
+	* added automatic backup file
+	* added Just One Space function from Chris Barker
+	* updated Editra style definitions
+	* added dialog box for unhandled exceptions, borrowed from Editra
+
+2008-11-09  Rob McMullen  <robm@users.sourceforge.net>
+
+	* Released peppy-0.8.34
+	* File -> Save As now adds new filename to recent files list and has same
+	permissions as original file
+	* refactored context menu code to provide context menus to sidebars
+	* added label selection for spectrum plot in HSI mode
+	* fixed deep copy bug in structrecord
+
+2008-10-21  Rob McMullen  <robm@users.sourceforge.net>
+
+	* Released peppy-0.8.17
+	* added Editra source code management status to project plugin
+	* moved project plugin to google code for development
+	* added workaround for Mac OS X lacking an AuiPaneInfo method
+	* refactoring of file load process into fileopener.py
+
+2008-10-15  Rob McMullen  <robm@users.sourceforge.net>
+
+	* Released peppy-0.8.9
+	* added DiffEditMode to view diff files
+	* added make commands to code explorer in MakefileMode
+	* fixed CGContextRestoreGState errors on mac
+	* added better error handler when changing major modes
+
+2008-10-07  Rob McMullen  <robm@users.sourceforge.net>
+
+	* Released peppy-0.8 "Bloviation Season"
+	* added SpringTabs, a popup system for sidebars
+	* added code explorer in SpringTabs, replacing function menu
+	* fixed regex search/replace using only '^' or '$'
+	* added --dbg command line option to turn on debug printing for
+	specified class name
+	* added File -> Properties menu action
+	* fixed bug where DOS paths weren't being identified as absolute paths
+	* progress bar maximum value now correctly set when switching modes
+	* changed title screen text to reflect that not all borrowed code is GPL
+	* added colormaps to HSI mode
+	* added image scaling command in HSI mode that generates a new image
+	* added capability in HSI mode to apply multiple filters in sequence
+	* added Gaussian convolution filter
+	* fixed seek errors in BSQ focal plane loading
+	* refactored HSI source code into multiple files for easier maintenance
+
+2008-09-16  Rob McMullen  <robm@users.sourceforge.net>
+
+	* Released peppy-0.7.5.4 update to "Manny Being Manny"
+	* modified autocomplete minibuffer to allow item not in drop down list
+	* improved rendering performance of autocomplete minibuffer
+	* added Recent Projects menu that lists recent files opened by project
+
+2008-09-12  Rob McMullen  <robm@users.sourceforge.net>
+
+	* Released peppy-0.7.5.3 update to "Manny Being Manny"
+	* tab now reindents a region
+	* fixed bugs in tab size and tabify/untabify calculations
+	* removed error message when duplicate keybinding is user specified
+	* fixed keybinding specification to be case-insensitive
+	* removed hsi/_utils C extension because the new numpy histogram stuff
+	is fast enough
+	* added spectral angle/euclidean distance and other spectral comparison
+	routines
+	* added image export to save a hyperspectral image view as png or jpg
+
+2008-09-01  Rob McMullen  <robm@users.sourceforge.net>
+
+	* Released peppy-0.7.5.2 update to "Manny Being Manny"
+	* added per-project view settings
+	* added keystroke in find/replace minibuffer to replace without moving
+	to next match
+	* fixed some usability issues with frame and buffer closing
+	* fixed problem with long filenames in text completion popup
+	* improved C/C++ function name matching in Functions menu
+	* fixed C style autoindenter's handling of semicolons
+
+2008-08-14  Rob McMullen  <robm@users.sourceforge.net>
+
+	* Released peppy-0.7.5.1 update to "Manny Being Manny"
+	* changed idle handler to improve performance when many windows open
+	* now saving view position data when switching buffers
+	* dired mode now reverts correctly
+	* added action to sort lines by a particular field in each line
+	* user keystroke settings now take precedence if multiple actions have
+	the same keystroke
+	* added peppy actions for most scintilla keystrokes
+
+2008-08-05  Rob McMullen  <robm@users.sourceforge.net>
+
+	* Released peppy-0.7.5 "Manny Being Manny"
+	* recent file list now saves after every change rather than at exit
+	* minor bugfixes to HSI mode
+
+2008-07-31  Rob McMullen  <robm@users.sourceforge.net>
+
+	* Released peppy-0.7.4.3 update to "Hammer Thrower"
+	* changed HSI loading order to be able to display progress bar if needed
+	* moved GDAL support into plugins
+	* i18n updates: added Czech, Greek, Dutch, Occitan, Polish, Portuguese,
+	Brazillian Portuguese, and Turkish support
+
+2008-07-27  Rob McMullen  <robm@users.sourceforge.net>
+
+	* Released peppy-0.7.4.2 update to "Hammer Thrower"
+	* pulled memory mapping out of Cube into CubeReader
+	* added direct file access for HSI data in BIP, BIL, and BSQ formats
+
+2008-07-23  Rob McMullen  <robm@users.sourceforge.net>
+
+	* Released peppy-0.7.4.1 update to "Hammer Thrower"
+	* added project support
+	* added CTAGS support for projects
+	* added templates that are used instead of a blank file
+	* added bash style word completion plugin from Frank Atle Rød
+	* added progress bar capability to HSI.Cube
+	* added SciTE algorithm that guesses the indent size in a file
+	* changed default path to the home directory of the user rather than the
+	directory in which peppy was started
+	* added actions to hide all minor modes and sidebars
+	* fixed popup windows and the completion minibuffer on OSX
+	* added substring matching to completion minibuffer
+	* speeded up local file loading by turning off threaded loading for
+	file:// URLs
+	* added DescribeKey action
+	* fixed delayed display of subprocess output by polling with a timer
+	* added RunFilter action to run an arbitrary command on the current file
+	* improved Editra theme handling
+
+2008-06-23  Rob McMullen  <robm@users.sourceforge.net>
+
+	* Released peppy-0.7.4 "Hammer Thrower"
+	* added check for files modified by other applications
+	* added close icon to minibuffer
+	* fixed windows ESC keybinding to close minibuffer when active
+	* changed job control to allow interpreter executables to be relative to
+	the user's PATH in addition to absolute pathnames
+	* added File Cabinet management to reorder list and delete items
+	* added Ctrl+Shift click on fold margin to expand/hide all folds
+
+2008-06-18  Rob McMullen  <robm@users.sourceforge.net>
+
+	* Released peppy-0.7.3.4 update to "Zeta Function"
+	* added bookmarks for saving places within a file
+	* added support for creating subsets of hyperspectral images
+	* preferences now update per-view (local) settings if desired
+	* improved C autoindenter to handle classes and namespaces
+	* added electricDelete and electricBackspace to C autoindenter
+	* added action to switch to buffer using text completion
+	* added the beginnings of a user's manual
+
+2008-05-05  Rob McMullen  <robm@users.sourceforge.net>
+
+	* Released peppy-0.7.3.3 update to "Zeta Function"
+	* added full python regular expression search and replace
+	* workaround for missing tab key event on OSX replace minibuffer
+	* fixed flickering splash screen on OSX
+	* spell checker is now a standalone object instead of plugin
+	* added action to sort lines
+	* revert now keeps the file positioned at the same line
+	* added action to change the font size (scintilla's built-in zoom)
+	* slider controls can now appear in toolbars
+	* added slider to quickly select bands in hyperspectral mode
+	* added Aptus plugin to distribution (includes compiled extension, so
+	only works on win32 and linux 64 bit currently)
+
+2008-04-24  Rob McMullen  <robm@users.sourceforge.net>
+
+	* Released peppy-0.7.3.2 update to "Zeta Function"
+	* changed search and replace to Emacs style
+	* added scintilla regular expression search/replace
+	* added shell wildcard search/replace
+	* added help display for minibuffers, and a help item in the menu bar
+	* added repeat action to minibuffer actions (you can now search again
+	using the same keystroke that triggered the first search)
+	* actions can now assert they have the focus before operating (which
+	then allows global actions regardless of what has focus)
+	* added hooks into HSI mode to change initial viewing parameters
+	* added url query string and fragment support to mem filesystem
+	* fixed OSX problems (double Help menu, mac style modifier keys in menu)
+	* workaround for scintilla autoindenting bug on last line of file
+	* can now switch keybinding platforms on the fly through preferences
+
+2008-04-07  Rob McMullen  <robm@users.sourceforge.net>
+
+	* Released peppy-0.7.3.1 update to "Zeta Function"
+	* changed plugins' attemptOpen method to return exact and generic major
+	mode matches
+	* fixed error in plugins when loading files with unknown extension
+	* updated GDAL support to GDAL 1.5 for hyperspectral images
+	* fall back to GDAL when can't memory map an image in ENVI mode
+	* moved plugins having non-core functionality to googlecode repository
+
+2008-04-02  Rob McMullen  <robm@users.sourceforge.net>
+
+	* Released peppy-0.7.3 "Zeta Function"
+	* created new autoindent architecture
+	* added regex autoindenter based on KDE's Kate regex syntax
+	* added beginnings of C-style autoindenter based on Scintilla's folding
+	* much improved recognition of function names for C, C++, Java
+	* fixed problem in python autoindenter's handling of comments
+	* multiple untitled files can now be opened
+	* reorganized source code to provide examples of setuptools plugins
+	* added utility to select all text between matching braces
+	* added backslashify and unbackslashify commands
+	* added emacs style cursor movement commands from Christopher Armstrong
+	* added clipping filters to hyperspectral image viewer
+	* added DebugKeypress action to help OSX debugging
+	* added Mandelbrot set generator
+	* i18n updates: added Hungarian and Ukrainian and updated German,
+	French, Esperanto and Spanish message catalogs
+	* added new documentation on http://trac.flipturn.org/wiki
+	* many bug fixes
+
+2008-03-07  Rob McMullen  <robm@users.sourceforge.net>
+
+	* Released peppy-0.7.2.7 update to "Oscillation Overthruster"
+	* added parsing of some vim and emacs modeline options
+	* added simple bookmarks list to save URLs of the user's choice
+	* added image clipping to hyperspectral image viewing
+	* changed settings to apply to individual views instead of sharing
+	among all views of the same major mode
+	* fixed zero length files being interpreted as tar files
+	* fixed problem opening XML files
+	* added action to open files in new window
+	* started simplification process for generating py2exe files
+
+2008-02-27  Rob McMullen  <robm@users.sourceforge.net>
+
+	* Released peppy-0.7.2.6 update to "Oscillation Overthruster"
+	* added on-the-fly spell checking using pyenchant
+	* added right-click action to suggest other spellings
+	* added more sample languages: Catalan, Esperanto, Italian, French,
+	Swedish, and UK English
+	* added Fortran 77 editing mode
+	* added new action to move a tab to a new window
+	* added action to revert a file with a new encoding
+	* redesigned the status bar to prevent flickering
+	* added preference to show whitespace indicators
+
+2008-02-17  Rob McMullen  <robm@users.sourceforge.net>
+
+	* Released peppy-0.7.2.5 update to "Oscillation Overthruster"
+	* added i18n support (and no need to restart to change languages!)
+	* added sample languages: Russian, Spanish, German, Chinese & Japanese
+	* added setting for how new files are opened: in new tabs or reuse tabs
+
+2008-02-14  Rob McMullen  <robm@users.sourceforge.net>
+
+	* Released peppy-0.7.2.4 update to "Oscillation Overthruster"
+	* fixed a bunch of corner cases related to unicode paths
+	* added file encoding and "magic comment" support
+	* added menu items for find and replace
+
+2008-02-09  Rob McMullen  <robm@users.sourceforge.net>
+
+	* Released peppy-0.7.2.3 update to "Oscillation Overthruster"
+	* now works with unicode pathnames
+	* fixed other problems related to unicode support
+	* C/C++ modes now display rudimentary function menus
+	* added simple list of keybindings
+	* added menu entry for bug reports
+
+2008-02-05  Rob McMullen  <robm@users.sourceforge.net>
+
+	* Released peppy-0.7.2.2 update to "Oscillation Overthruster"
+	* Revision 1000 in svn!
+	* moved action base clasess into peppy.actions
+	* added action tutorials to wiki
+	* synced Editra styling info to Editra version 0.2.50
+	* now checking fold capabilities of mode before showing Functions menu
+	* fixed missing about:untitled
+	* fixed memory leak in menu system
+	* fixed conflict with Cut keybinding (C-X works now)
+	* added command to set struct format in HexEdit mode
+
+2008-02-02  Rob McMullen  <robm@users.sourceforge.net>
+
+	* Released peppy-0.7.2.1 update to "Oscillation Overthruster"
+	* added popup menus to notebook tabs
+	* added hooks for popup menus over major mode contents
+	* some Mac icons from Chris Barker
+	* added upcase/downcase commands to menubar
+	* added capability to wrap at word boundaries
+	* fixed bug in RecentFiles when starting peppy on a fresh install
+
+2008-01-14  Rob McMullen  <robm@users.sourceforge.net>
+
+	* Released peppy-0.7.2 "Oscillation Overthruster"
+	* added documentation
+	* changed "Buffer" to "Document" and "Frame" to "Window" in UI to scare
+	non-emacs users a bit less
+	* added autocompletion support for Save As...
+	* cleaned up display of documents in the Documents menu
+	* simplified menu system for menus that had to be kept consistent across
+	multiple windows
+
+2008-01-08  Rob McMullen  <robm@users.sourceforge.net>
+
+	* Released peppy-0.7.1.8 update to "The Winchester"
+	* added default sort (by name) to dired mode
+	* default mimetypes are now used instead of default major mode names
+	* released ColumnAutoSizeMixin as separate library
+	* vfs autocompletion on filenames
+
+2008-01-03  Rob McMullen  <robm@users.sourceforge.net>
+
+	* Released peppy-0.7.1.7 update to "The Winchester"
+	* fixed error that prevented the preferences dialog from appearing
+
+2008-01-02  Rob McMullen  <robm@users.sourceforge.net>
+
+	* Released peppy-0.7.1.6 update to "The Winchester"
+	* speeded up menu generation by caching list of actions
+	* fixed problem on windows where major modes weren't getting destroyed
+	properly
+
+2007-12-28  Rob McMullen  <robm@users.sourceforge.net>
+
+	* Released peppy-0.7.1.5 update to "The Winchester"
+	* changed bitmapscroller to use wx.Overlay
+	* added verifyMimetype interface to MajorMode
+
+2007-12-19  Rob McMullen  <robm@users.sourceforge.net>
+
+	* Released peppy-0.7.1.4 update to "The Winchester"
+	* added ColumnSorterMixin to buffer list and dired modes
+	* better error handling during file loading
+	* added PythonErrorMode
+	* updated ColumnSizerMixin
+
+2007-12-14  Rob McMullen  <robm@users.sourceforge.net>
+
+	* Released peppy-0.7.1.3 update to "The Winchester"
+	* changed major modes to be direct subclasses of wx.Window
+	* added MajorModeWrapper
+	* added mime type detection when determining major mode
+	* handle middle mouse select/paste on X11 platforms
+	* emulate middle mouse on non X11
+
+2007-12-04  Rob McMullen  <robm@users.sourceforge.net>
+
+	* Released peppy-0.7.1.2 update to "The Winchester"
+	* added virtual filesystem from itools
+	* added mem: virtual filesystem for temporary files
+	* fragments in urls are handled as line numbers in most modes (i.e.
+	file://blah/stuff.txt#223 will open the file to line number 223)
+	* clicking on file in python traceback goes to the correct line
+
+2007-11-14  Rob McMullen  <robm@users.sourceforge.net>
+
+	* Released peppy-0.7.1.1 update to "The Winchester"
+	* Included PyParse with peppy to guarantee compatible version
+	* Fixed indenting for windows-style line endings
+	* Fixed quit dialog problem on msw
+
+2007-11-13  Rob McMullen  <robm@users.sourceforge.net>
+
+	* Released peppy-0.7.1 "The Winchester"
+	* Added function menu using the fold explorer backend
+	* Paths in python trackbacks are now clickable
+	* Added Buffer List mode ala emacs
+	* Alternate method to code plugins to allow on-demand loading (e.g.
+	prevents loading numpy until hyperspectral image mode is first used)
+
+2007-11-07  Rob McMullen  <robm@users.sourceforge.net>
+
+	* Released peppy-0.7.0.4 update to "Kibbles 'n' Snouts"
+	* fixed reindent code for more corner cases
+	* added some default mac keybindings
+
+2007-10-31  Rob McMullen  <robm@users.sourceforge.net>
+
+	* Released peppy-0.7.0.3 update to "Kibbles 'n' Snouts"
+	* added reindent code from IDLE
+	* added ChangeLog mode
+	* added mouse wheel settings (scroll by lines/page)
+
+2007-10-23  Rob McMullen  <robm@users.sourceforge.net>
+	
+	* Released peppy-0.7.0.2 update to "Kibbles 'n' Snouts"
+        * Added fill-paragraph
+        * Icons now bundled in iconmap.py for distribution
+
+2007-10-22  Rob McMullen  <robm@users.sourceforge.net>
+	
+	* Released peppy-0.7.0.1 update to "Kibbles 'n' Snouts"
+	* Added font configuration in preferences
+	* spaces now allowed in pathnames when running scripts
+
+2007-10-17  Rob McMullen  <robm@users.sourceforge.net>
+	
+	* Released peppy-0.7.0 "Kibbles 'n' Snouts"
+	* Dogfooding release!  Used peppy to edit peppy
+	* Added minibuffer filename loading with tab completion
+	* Added M-x keystroke processing and tab completion
+	* Removed the Boa style editor and replaced with the Editra style
+	editor and style sheet system
+	* Fixed menu system that was causing massive slowdowns as a result
+	of event connections that were not removed
+	* Added documentation and samples of major modes, minor modes,
+	and plugins
+	* Added session saving
+	* Run and stop scripts from the editor
+	* Emacs-style lower-case-with-hyphen aliases are available for most
+	actions
+
+2007-10-09  Rob McMullen  <robm@users.sourceforge.net>
+
+	* Released peppy-0.6.6 "Wait for it..."
+	* Non-announced release, to allow iteration 7 and version 0.7.0 to
+	announce my dogfooding code
+	* Yes, this is totally "marketing" driven to have a .0 release be
+	announced rather than 0.6.6 which people may not pay attention to
+
+2007-10-03  Rob McMullen  <robm@users.sourceforge.net>
+
+	* Released peppy-0.6.5.1 "I'm not left-handed either."
+	* fixed mixed relative and absolute imports
+
+2007-10-01  Rob McMullen  <robm@users.sourceforge.net>
+
+	* Released peppy-0.6.5 "Where's the sports?"
+	* Converted to yapsy plugins instead of trac plugins
+	* Added splash screen with progress bar
+	* Import i18n dependencies inside PeppyApp
+	* Added version numbering to major modes
+	* Added indicator on dnd in playlist
+	* Added autoscrolling to lists on drop
+	* Renamed the Cmds menu to Transforms
+	* Made toolbar hideable
+	* Changed preferences & settings to use custom editors depending on type
+	* Added py2exe support
+	* User-definable startup page
+	* Buffers now (optionally) loaded in separate thread
+	* Busy cursor now displayed if not loading in separate thread
+	* MPDMode: Add count of songs and total time
+	* MPDMode: fixed problem where it wouldn't show files in directory that
+	has both dirs and files
+	* Added goto offset capability in hex edit
+	* Added ability to specify integers in different bases
+	* Now use wx methods for determining user's homedir
+	* Fixed bug on windows, where can't up an new tab after closing the
+	last tab of a view
+
+2007-09-08  Rob McMullen  <robm@users.sourceforge.net>
+
+	* Released peppy-0.6.4
+	* Added MPD major mode
+	* Created MPD threaded MPD client layer on top of libmpdclient2
+	* Changed minor modes to be mixins that are expected to also
+	subclass from wx.Window
+	* Moved sidebars out of buffer.py and made changes analogous to
+	minor mode
+	* Added NeXTPanel, a NeXT FileManager like client to show
+	hierarchies
+	* Added support for setuptools plugins
+	* Streamlined buffer loading process; not so convoluted now
+	* Changed process for matching a major mode to a url
+	* Added widget inspector plugin from wx.lib
+	* Added an error logging sidebar
+	* Various bug fixes
+
+2007-05-10  Rob McMullen  <robm@users.sourceforge.net>
+
+	* Released peppy-0.6.3
+	* Added hyperspectral image mode (requires numpy)
+	* Added zoomable image display for bitmaps
+	* Added preference dialog
+
+2007-03-11  Rob McMullen  <robm@users.sourceforge.net>
+
+	* Released peppy-0.6.2
+	* Loadable keybindings using --key-bindings=win or
+	--key-bindings=emacs
+	* Custom keybindings also specifiable in config file
+	* I18N support for text strings
+	* Line-endings supported: unix, windows, old-style apple
+	* Undoable line ending conversion
+	* Icons in the status bar
+	* Progress bar in the status bar and busy state added to modes
+	* New menubar layout based on Mac interface guidelines
+	* Better support of Mac menus (thanks to Chris Barker)
+	* Hide sidebars on application start
+	* File loading now based entirely on urllib2
+	* Added an application icon (although I'm sure it will change)
+	
+2007-03-01  Rob McMullen  <robm@users.sourceforge.net>
+
+	* Released peppy-0.6.1
+
+2007-02-22  Rob McMullen  <robm@users.sourceforge.net>
+
+	* Released peppy-0.6.0
+
+2007-02-11  Rob McMullen  <robm@users.sourceforge.net>
+
+	* Released peppy-0.5.1
+
+2007-02-08  Rob McMullen  <robm@users.sourceforge.net>
+
+	* Released peppy-0.5.0
+
+2007-01-13  Rob McMullen  <robm@users.sourceforge.net>
+
+	* Released peppy-0.4.0
+
+2006-12-24  Rob McMullen  <robm@users.sourceforge.net>
+
+	* Released peppy-0.3.0
+
+2006-10-17  Rob McMullen  <robm@users.sourceforge.net>
+
+	* Released peppy-0.2.0
+
+2006-09-21  Rob McMullen  <robm@users.sourceforge.net>
+
+	* Released peppy-0.1.0
+
+2006-09-07  Rob McMullen  <robm@users.sourceforge.net>
+
+	* SVN import of initial code
+	
+2006-09-03  Rob McMullen  <robm@users.sourceforge.net>
+
+	* Released peppy-0.0.1

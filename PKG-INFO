@@ -1,0 +1,26 @@
+Metadata-Version: 1.0
+Name: peppy
+Version: 0.16.0
+Summary: (ap)Proximated (X)Emacs Powered by Python
+Home-page: http://peppy.flipturn.org/
+Author: Rob McMullen
+Author-email: robm@users.sourceforge.net
+License: GPL
+Download-URL: http://peppy.flipturn.org/archive/
+Description: A full-featured editor for text files and more, Peppy provides an XEmacs-like multi-window, multi-tabbed interface using the Advanced User Interface (wx.aui) framework of wxPython.  It is built around the emacs concept of major modes -- different views are presented to the user depending on the type of data being edited.  Text files are shown using the wx.stc (Scintilla) editing component, binary files use a grid layout showing hexadecimal representation of the binary data, scientific image datasets are displayed using a raster band image displayer, and more.  Peppy is designed to be very extensible using setuptools plugins.
+Keywords: text editor,wxwindows,scintilla
+Platform: any
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: MacOS X
+Classifier: Environment :: Win32 (MS Windows)
+Classifier: Environment :: X11 Applications
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Documentation
+Classifier: Topic :: Text Editors

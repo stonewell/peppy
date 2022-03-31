@@ -1,0 +1,9 @@
+[Core]
+Name = SubRip Subtitle Mode
+Module = srt
+
+[Documentation]
+Author = Rob McMullen
+Version = 0.1
+Website = http://www.flipturn.org/peppy
+Description = Major mode for editing SubRip format video subtitle files

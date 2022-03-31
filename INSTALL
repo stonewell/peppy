@@ -1,0 +1,83 @@
+peppy 0.16.0
+None
+Copyright (c) 2006-2011 Rob McMullen (robm@users.sourceforge.net)
+
+http://peppy.flipturn.org/
+
+
+
+INSTALLATION
+============
+
+You do not need to install the program in any system directories in order to
+use it.  For testing purposes, I recommend you just unpack the source and run
+it from there.  See the README for more instructions.
+
+If you do want to install in system directories, I recommend using setuptools,
+the de-facto package management system in Python.  Setuptools provides a
+program called easy_install that manages dependencies among packages.
+
+You'll have to install wxPython separately, and if you don't have setuptools
+you can bootstrap it using:
+
+http://peak.telecommunity.com/dist/ez_setup.py
+
+Once setuptools is installed, you are ready to install with:
+
+$ tar xfv peppy-0.16.0.tar.bz2
+$ cd peppy-0.16.0
+$ easy_install -UZ .
+
+If you're looking for more info on how to install optional packages, read on...
+
+
+
+INSTALLING OPTIONAL MODULES
+===========================
+
+If using the hyperspectral image viewing capabilities of peppy, numpy
+*must* be installed, and scipy and gdal can optionally be installed.
+
+Installing NumPy
+----------------
+
+The numerical python library, NumPy (numpy.scipi.org) is installed
+like a typical python module: by downloading it and running
+
+$ python setup.py install
+
+You may have to be root to complete the installation.
+
+Installing SciPy
+----------------
+
+SciPy is a bit more complicated of an install, as it depends on the
+BLAS and LAPACK libraries.  The SciPy website has instructions here:
+
+http://www.scipy.org/Installing_SciPy/BuildingGeneral
+
+which is, unfortunately, a bit more complicated than just "python
+setup.py install" but is relatively straight-forward.  In general, you
+can just follow those instructions.
+
+However, a problem that plagued me for a while was that the "python
+setup.py install" stage was picking up libblas and liblapack from the
+system's /usr/lib directory, and RedHat prior to early 2007 supplied
+incomplete libraries.  I had to replace these system libraries with my
+just-built libraries, because setup.py seemed to ignore the paths I
+specified for BLAS and LAPACK as shown in the instructions on the
+webpage above.
+
+Installing GDAL
+---------------
+
+To take advantage of the variety of image formats that GDAL supports,
+you can install it as well.  Download from www.gdal.org and uncompress
+in a directory.  The setup is a bit more complicated than a typical
+python module:
+
+$ cd gdal-1.4.1
+$ ./configure --without-python --with-ngpython
+$ make
+$ cd swig/python
+$ python setup.py install

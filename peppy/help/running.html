@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Up and Running with Peppy</title>
+
+
+
+
+
+</head>
+<body>
+<div id="titleLine">
+<a href="http://peppy.flipturn.org/"><img src="_static/peppy-web-logo.png" alt="peppy - (ap)Proximated (X)Emacs Powered by Python" /></a>
+</div>
+<table><tr><td width="50%"><p><a href="index.html">Peppy 0.16.0 User Manual</a> &raquo;</p></td><td width="50%" align="right"><p>
+<a href="concepts.html" title="Concepts" accesskey="P">previous</a> |
+<a href="preferences.html" title="Customization and Preferences" accesskey="N">next</a> |
+<a href="genindex.html" title="General Index" accesskey="I">index</a></p></td></tr></table>
+<a name="up-and-running-with-peppy">
+<h1>Up and Running with Peppy</h1>
+<p>Once peppy is <a class="reference external" href="/download.html">installed</a>, starting the application depends how you installed
+the code.</p>
+<dl class="docutils">
+<dt>Installed using easy_install: (RECOMMENDED)</dt>
+<dd>If you used <tt class="docutils literal"><span class="pre">easy_install</span></tt> to install the latest version from the Python
+Package Index, a python script named <tt class="docutils literal"><span class="pre">peppy</span></tt> will be installed in the
+system binary directory, so simply typing <tt class="docutils literal"><span class="pre">peppy</span></tt> on the command line
+will start the program.</dd>
+<dt>Downloaded from source:</dt>
+<dd>If you downloaded peppy but did not install the source, you run the
+application with the command line <tt class="docutils literal"><span class="pre">python</span> <span class="pre">peppy.py</span></tt> from within the
+peppy directory.</dd>
+<dt>Installed from the downloaded source:</dt>
+<dd>If you ran <tt class="docutils literal"><span class="pre">python</span> <span class="pre">setup.py</span> <span class="pre">install</span></tt> on the downloaded source, a python
+script named <tt class="docutils literal"><span class="pre">peppy</span></tt> will be installed in the system binary directory.</dd>
+<dt>Installed a binary distribution:</dt>
+<dd>This is only applicable to Windows and Mac OS X. The install process will
+leave an icon somewhere, and you can just click on that.</dd>
+</dl>
+<a name="command-line-use"></a>
+<h2>Command Line Use</h2>
+<p>When you start peppy from the command line, you can specify options and URLs
+to load.  For example, running from a source distribution, you might use a
+command line like this:</p>
+<p><tt class="docutils literal"><span class="pre">python</span> <span class="pre">peppy.py</span> <span class="pre">README</span> <span class="pre">/tmp/file.txt</span> <span class="pre">http://www.flipturn.org/index.html</span></tt></p>
+<p>which tells peppy to open three URLs: the local file <tt class="docutils literal"><span class="pre">README</span></tt> in the
+current directory, the file <tt class="docutils literal"><span class="pre">/tmp/file.txt</span></tt>, and the <tt class="docutils literal"><span class="pre">index.html</span></tt> file from
+<tt class="docutils literal"><span class="pre">http://www.flipturn.org</span></tt>.</p>
+<a name="options"></a>
+<h3>Options</h3>
+<p>There are many command line options available, the most useful of which are
+outlined below.  You can see the full list by running peppy with the <tt class="docutils literal"><span class="pre">--help</span></tt>
+argument.</p>
+<dl class="docutils">
+<dt>-d:</dt>
+<dd>Send all debug printing to the console</dd>
+<dt>-t:</dt>
+<dd>Run in test mode &#8211; allow multiple peppy processes (see the next section)
+and send all debug printing to the console</dd>
+<dt>-v:</dt>
+<dd>Run in verbose mode, which turns on <strong>a lot</strong> of debugging output.  Use in
+combination with <tt class="docutils literal"><span class="pre">-d</span></tt> or <tt class="docutils literal"><span class="pre">-t</span></tt> to send the output to the console</dd>
+</dl>
+
+
+<a name="single-peppy-process"></a>
+<h2>Single Peppy Process</h2>
+<p>Normally, peppy only allows a single process per user so that subsequent file
+open requests (by starting peppy from the command line with an argument) will
+actually be opened by the already running process.  This can be disabled by
+preference or by the <tt class="docutils literal"><span class="pre">-t</span></tt> option as described above.</p>
+
+<a name="using-the-basic-menu-functions"></a>
+<h2>Using the Basic Menu Functions</h2>
+<p>The GUI should be similar to typical windowed applications
+on your platform.  The layout of the menu attempts to
+follow the <a class="reference external" href="http://developer.apple.com/documentation/UserExperience/Conceptual/OSXHIGuidelines/XHIGMenus/chapter_17_section_4.html">Apple style guidelines for the menu bar</a>
+even though peppy works with all platforms and not just Mac OS X. I found
+their guidelines useful and logical, and so applied them to my work.</p>
+<p>There are seven menu titles that will always appear in the menu bar, and
+additional titles depending on the major mode.  The seven are: File, Edit,
+View, Tools, Documents, Window, and Help.</p>
+<p>The File menu contains the common file load, file save, and related options.
+The Edit menu holds commands related to editing and selecting text or data,
+and also is where you&#8217;ll find the <a class="reference external" href="preferences.html#preferences"><em>preferences</em></a>.  View
+holds menu items that affect how the major mode displays its contents, but
+nothing that actually alters the data &#8211; just how the data is viewed.  The
+Tools menu holds standalone commands that either start a process or don&#8217;t
+change the contents of the document.  The Documents menu contains a list of
+currently open documents, but note that some documents may not have an active
+view.  Window holds a list of top level peppy windows, allowing you to switch
+back and forth between them.  And finally, Help contains menu items related
+to documentation.</p>
+<a name="opening-files"></a>
+<h3>Opening Files</h3>
+<p>Peppy provides several commands to open files, from the traditional GUI file
+dialog using the File -&gt; Open -&gt; Open File menu command, to the more emacs-
+like File -&gt; Open -&gt; Open File using Minibuffer command (bound to C-x C-f in
+emacs keybinding mode).</p>
+
+<a name="editing-files"></a>
+<h3>Editing Files</h3>
+<p>Once a file has been opened, a new tab will appear in the window that shows
+the GUI that is used to edit that type of file.  There are specific types of
+editing modes, called <a class="reference external" href="concepts.html#majormodes"><em>major modes</em></a>, for different types
+of files.  For instance, plain text files are editing using the Fundamental
+major mode, while python source files are edited using the Python major mode.
+Both these major modes are similar is that they use a text editing component
+(called the StyledTextCtrl in wxPython, which is based on the <a class="reference external" href="http://www.scintilla.org">Scintilla</a>
+source code editing component).  However, unlike most editors, text files
+are not the only thing that can be edited.  There are major modes for editing
+<a class="reference external" href="HexEdit.html#hexedit"><em>binary files</em></a>, and even <a class="reference external" href="HSI.html#hsi"><em>hyperspectral images</em></a>.</p>
+
+<a name="saving-files"></a>
+<h3>Saving Files</h3>
+<p>After editing the file, it must be saved before the changes can be made
+permanent.  Like opening files, there are several ways to save the file.
+You can use the File -&gt; Save to save the file if you want to overwrite your
+changes, or File -&gt; Save As to pull up a traditional file save dialog to save
+it to a new file.  Some major modes provide other ways to save the file in the
+File -&gt; Export menu.</p>
+
+
+
+</a>
+<table><tr><td width="50%"><p><a href="index.html">Peppy 0.16.0 User Manual</a> &raquo;</p></td><td width="50%" align="right"><p>
+<a href="concepts.html" title="Concepts">previous</a> |
+<a href="preferences.html" title="Customization and Preferences">next</a> |
+<a href="genindex.html" title="General Index">index</a></p></td></tr></table>
+<div class="footer">
+Updated 24 Feb 2011 by Rob McMullen &lt;robm at flipturn.org&gt;
+</div>
+</body>
+</html>

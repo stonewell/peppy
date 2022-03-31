@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>HexEdit Major Mode</title>
+
+
+
+
+
+</head>
+<body>
+<div id="titleLine">
+<a href="http://peppy.flipturn.org/"><img src="_static/peppy-web-logo.png" alt="peppy - (ap)Proximated (X)Emacs Powered by Python" /></a>
+</div>
+<table><tr><td width="50%"><p><a href="index.html">Peppy 0.13.4 User Manual</a> &raquo;</p></td><td width="50%" align="right"><p>
+<a href="python.html" title="Python Major Mode" accesskey="P">previous</a> |
+<a href="hsi.html" title="Hyperspectral Image Major Mode" accesskey="N">next</a> |
+<a href="genindex.html" title="General Index" accesskey="I">index</a></p></td></tr></table>
+<a name="hexedit-major-mode">
+<a name="hexedit"></a><h1>HexEdit Major Mode</h1>
+<p>HexEdit mode provides a means to edit binary data, that is: to edit individual
+bytes of a file.  It doesn&#8217;t matter what type of file it is, whether it&#8217;s a
+text file or an image or an mp3 or a file full of IEEE floating point values
+&#8211; HexEdit can display the file.</p>
+<p>Currently there are a small number of limitations.  First is that the file size
+is limited: peppy can only edit files that can fit into memory.  And second,
+if there are other views of the file (say it is a text file and one view is
+in Fundamental Mode and the other is HexEdit), the file must be viewed as
+raw bytes without an encoding.  This is due to limitations in the styled text
+control that is used as the data storage mechanism.</p>
+<a name="the-editing-window"></a>
+<h2>The Editing Window</h2>
+<div align="center" class="align-center"><p></p><img alt="_images/peppy-hexedit-mode.png" class="align-center" src="_images/peppy-hexedit-mode.png" /></div>
+<p>Peppy provides an editing window that shows the data fairly standard hex editor
+form: two sections, one showing the bytes as hexadecimal values, and the other
+section showing the same bytes as ASCII characters.</p>
+
+
+</a>
+<table><tr><td width="50%"><p><a href="index.html">Peppy 0.13.4 User Manual</a> &raquo;</p></td><td width="50%" align="right"><p>
+<a href="python.html" title="Python Major Mode">previous</a> |
+<a href="hsi.html" title="Hyperspectral Image Major Mode">next</a> |
+<a href="genindex.html" title="General Index">index</a></p></td></tr></table>
+<div class="footer">
+Updated 12 Nov 2009 by Rob McMullen &lt;robm at flipturn.org&gt;
+</div>
+</body>
+</html>

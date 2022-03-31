@@ -1,0 +1,209 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Customization and Preferences</title>
+
+
+
+
+
+</head>
+<body>
+<div id="titleLine">
+<a href="http://peppy.flipturn.org/"><img src="_static/peppy-web-logo.png" alt="peppy - (ap)Proximated (X)Emacs Powered by Python" /></a>
+</div>
+<table><tr><td width="50%"><p><a href="index.html">Peppy 0.16.0 User Manual</a> &raquo;</p></td><td width="50%" align="right"><p>
+<a href="running.html" title="Up and Running with Peppy" accesskey="P">previous</a> |
+<a href="Fundamental.html" title="Text Editing Basics *" accesskey="N">next</a> |
+<a href="genindex.html" title="General Index" accesskey="I">index</a></p></td></tr></table>
+<a name="customization-and-preferences">
+<a name="preferences"></a><h1>Customization and Preferences</h1>
+<p>There are two ways to change preferences in peppy.  First is to use the Edit
+-&gt; Preferences menu (or Peppy -&gt; Preferences menu if you&#8217;re on Mac OS X).
+Most settings are available here, although there are a few that can&#8217;t be set
+through the GUI.  Those settings that can&#8217;t must be modified by hand in the
+configuration directory.</p>
+<a name="using-the-preferences-dialog"></a>
+<h2>Using the Preferences Dialog</h2>
+<p>Most of the common configuration options are available through the preferences
+dialog.</p>
+<div align="center" class="align-center"><p></p><img alt="_images/peppy-preferences-dialog.png" class="align-center" src="_images/peppy-preferences-dialog.png" /></div>
+<p>The settings are grouped into four different tabs: General, Modes, Misc,
+and Plugins, where General settings apply to global or application level
+configuration objects, Modes apply to the various major modes, Misc contains
+a bunch of stuff that didn&#8217;t have any other tab to be placed, and Plugins
+unsurprisingly contains options for plugin objects.  Clicking any item on in
+the left hand list will bring up the specific settings for that item.</p>
+<p>Note that any changes to settings are only only applied after clicking OK to
+the dialog; they are not applied immediately.  Note that you may change tabs
+at any time before hitting OK; your settings aren&#8217;t lost when investigating
+settings of other items.</p>
+
+<a name="changing-text-styles"></a>
+<h2>Changing Text Styles</h2>
+<p>Font colors and styles are changed using the Edit -&gt; Text Styles dialog.  This
+associates particular syntax elements of the text file with styles and colors
+specified here.  If you&#8217;re familiar with <a class="reference external" href="www.editra.org">Editra</a>, you&#8217;ll recognize the text
+style dialog:</p>
+<div align="center" class="align-center"><p></p><img alt="_images/peppy-text-style-dialog.png" class="align-center" src="_images/peppy-text-style-dialog.png" /></div>
+<p>Peppy uses the same styling system as Editra, and indeed can use the same style
+sheets as created by Editra when placed in the proper configuration directory
+of peppy.  (See below for more information on configuration files.)</p>
+<p>The convenient characteristic of the Editra styling system is syntax elements
+are styled using the same font/color combination regardless of language.  So,
+for example, comments in Python will appear the same as comments in C++.  This
+leads to a much quicker setup time when configuring peppy to display syntax
+elements in the manner that you like.</p>
+<a name="changing-fonts"></a>
+<h3>Changing Fonts</h3>
+<p>The only text styling item not set through the text style dialog is the
+specific font used to display the text.  The wxPython StyledTextCtrl uses a
+single font for the main text, and can optionally use a separate font for the
+line numbers.  These fonts are set in the Preferences dialog: in the General
+tab:</p>
+<div align="center" class="align-center"><p></p><img alt="_images/peppy-preferences-fonts.png" class="align-center" src="_images/peppy-preferences-fonts.png" /></div>
+<p>choose the Fonts item and select the primary editing font (for the main
+text) and the secondary editing font (for the line numbers).</p>
+
+
+<a name="configuration-files"></a>
+<h2>Configuration Files</h2>
+<p>Peppy maintains a configuration directory on a per-user basis.  Where
+it is located depends on which platform you are using: (if you&#8217;re
+familiar with wxWindows, it&#8217;s the directory that&#8217;s returned from the
+<tt class="docutils literal"><span class="pre">wx.StandardPaths.GetUserDataDir()</span></tt> method)</p>
+<blockquote>
+<ul class="simple">
+<li>unix/linux: <tt class="docutils literal"><span class="pre">$HOME/.peppy</span></tt></li>
+<li>windows: <tt class="docutils literal"><span class="pre">C:/Documents</span> <span class="pre">and</span> <span class="pre">Settings/username/Application</span> <span class="pre">Data/Peppy</span></tt></li>
+<li>mac: <tt class="docutils literal"><span class="pre">~/Library/Application</span> <span class="pre">Support/Peppy</span></tt></li>
+</ul>
+</blockquote>
+<p>There are a variety of files in that directory, used to store various bits of
+data for persistence between runs of peppy.  The user configuration file is
+peppy.cfg, and the settings saved by the application go in preferences.cfg.
+Don&#8217;t use preferences.cfg for your user settings, as they are overwritten
+when settings are saved after exiting the main application.  Put all your
+hand-edited changes in peppy.cfg instead.</p>
+<p>The preferences are stored in <a class="reference external" href="http://en.wikipedia.org/wiki/INI_file">Windows INI</a> format.</p>
+
+<a name="internationalization-i18n"></a>
+<h2>Internationalization (i18n)</h2>
+<p>Several national languages are available thanks to the members of Launchpad who
+have been kind enough to translate my English into other languages.  In the
+preferences dialog, click on the General tab and choose the Languages item.
+You can select from any of the languages in the list, and the user interface
+will change immediately.  No need to restart the application!</p>
+
+<a name="key-bindings"></a>
+<h2>Key Bindings</h2>
+<p>There are three styles of key binding supported by peppy: windows style, Mac
+style, and emacs style.  These are controlled by preference settings in the
+Preferences menu, in the General tab under the Keyboard item.  This setting
+controls the default key bindings for all actions; actions may still be
+overridden manually.</p>
+<a name="configuring-key-bindings"></a>
+<h3>Configuring Key Bindings</h3>
+<p>User specified key bindings should be stored in the peppy.cfg file in the
+user&#8217;s preferences directory.</p>
+<p>In the <tt class="docutils literal"><span class="pre">peppy.cfg</span></tt> file, the section <tt class="docutils literal"><span class="pre">KeyboardConf</span></tt> controls user overrides
+to the default keybindings.</p>
+<p>An example of the section might be:</p>
+<div class="highlight"><pre><span class="p">[</span><span class="n">KeyboardConf</span><span class="p">]</span>
+<span class="n">key_bindings</span> <span class="o">=</span> <span class="s">&quot;emacs&quot;</span>
+<span class="n">NextWord</span> <span class="o">=</span> <span class="n">C</span><span class="o">-</span><span class="n">N</span>
+<span class="n">PreviousWord</span> <span class="o">=</span> <span class="n">C</span><span class="o">-</span><span class="n">P</span>
+<span class="n">Paste</span> <span class="o">=</span> <span class="n">C</span><span class="o">-</span><span class="n">V</span>
+</pre></div>
+
+<p>Breaking it down by parts:</p>
+<dl class="docutils">
+<dt>[KeyboardConf]</dt>
+<dd>This is the section header that denotes a keyboard configuration block</dd>
+<dt>key_bindings = &#8220;emacs&#8221;</dt>
+<dd>The <tt class="docutils literal"><span class="pre">key_bindings</span></tt> variable controls the default keyboard configuration.
+If this variable is not present, the default configuration is automatically
+determined based on the platform.  To set this variable, it should use one
+of the following values: &#8220;emacs&#8221;, &#8220;win&#8221;, or &#8220;mac&#8221;.</dd>
+<dt>NextWord = C-n</dt>
+<dd>The remaining entries in the section are keybindings.  The format of each
+line is <tt class="docutils literal"><span class="pre">ActionName</span> <span class="pre">=</span> <span class="pre">keybinding</span></tt>, where <tt class="docutils literal"><span class="pre">ActionName</span></tt> is the
+class name of the action you wish to rebind.  Currently, the easiest way
+to discover these name is to run peppy with the <tt class="docutils literal"><span class="pre">--show-key-bindings</span></tt>
+argument, which will display all of the current keybindings to the console
+in a format usable for the <tt class="docutils literal"><span class="pre">KeyboardConf</span></tt> section of the preferences.
+You can also use the menu item <tt class="docutils literal"><span class="pre">Help</span> <span class="pre">-&gt;</span> <span class="pre">Show</span> <span class="pre">Key</span> <span class="pre">Bindings</span></tt>, or when all
+else fails you can look at the source code.  (A GUI to change the keybindings
+is ticket #53 on the roadmap.  Feel free to add suggestions there.)
+<dd><p>To specify keystrokes, consult the section below.</p></dd>
+</dd>
+</dl>
+
+<a name="describing-keystrokes"></a>
+<h3>Describing Keystrokes</h3>
+<p>To modify the key bindings, Key bindings are specified using a special
+shorthand showing the modifiers of the key and the key itself.  Modifiers are:</p>
+<blockquote>
+<ul class="simple">
+<li><strong>S</strong> - Shift</li>
+<li><strong>C</strong> - Control on win/unix, Command on mac</li>
+<li><strong>M</strong> - Meta or Alt on win/unix, Option on mac</li>
+</ul>
+</blockquote>
+<p>Keys are then specified using a string listing the modifier characters
+separated by the - character, and then the unshifted character itself.
+Unmodified keys are also possible &#8211; if the keystroke doesn&#8217;t contain a -
+character it is used as a literal character.  For example:</p>
+<blockquote>
+<ul class="simple">
+<li><strong>x</strong> - the letter X</li>
+<li><strong>s</strong> - the letter S</li>
+<li><strong>S-s</strong> - shift S</li>
+<li><strong>C-a</strong> - control A</li>
+<li><strong>S-/</strong> - shift slash (note that you can&#8217;t specify a ? directly &#8211; keys are recognized by their unshifted state in wx)</li>
+<li><strong>M-C-q</strong> - alt control Q</li>
+</ul>
+</blockquote>
+<p>Multiple keystrokes are separated by spaces:</p>
+<blockquote>
+<ul class="simple">
+<li><strong>C-x C-s</strong> - control X followed by control S</li>
+<li><strong>C-x 5 2</strong> - control X followed by the number 5 followed by the number 2</li>
+</ul>
+</blockquote>
+<p>Special characters are given by their text equivalent:</p>
+<blockquote>
+<ul class="simple">
+<li><strong>TAB</strong> - the tab key</li>
+<li><strong>S-UP</strong> - shift up arrow</li>
+</ul>
+</blockquote>
+<p>Here&#8217;s a list of special characters (note that if you&#8217;re familiar with
+wxPython, this is really just the <cite>WXK_</cite> name with the <cite>WXK_</cite> prefix removed):</p>
+<blockquote>
+BACK TAB RETURN ESCAPE SPACE DELETE START LBUTTON RBUTTON CANCEL MBUTTON
+CLEAR PAUSE CAPITAL PRIOR NEXT END HOME LEFT UP RIGHT DOWN SELECT PRINT
+EXECUTE SNAPSHOT INSERT HELP NUMPAD0 NUMPAD1 NUMPAD2 NUMPAD3 NUMPAD4 NUMPAD5
+NUMPAD6 NUMPAD7 NUMPAD8 NUMPAD9 MULTIPLY ADD SEPARATOR SUBTRACT DECIMAL
+DIVIDE F1 F2 F3 F4 F5 F6 F7 F8 F9 F10 F11 F12 F13 F14 F15 F16 F17 F18 F19
+F20 F21 F22 F23 F24 NUMLOCK SCROLL PAGEUP PAGEDOWN NUMPAD_SPACE NUMPAD_TAB
+NUMPAD_ENTER NUMPAD_F1 NUMPAD_F2 NUMPAD_F3 NUMPAD_F4 NUMPAD_HOME NUMPAD_LEFT
+NUMPAD_UP NUMPAD_RIGHT NUMPAD_DOWN NUMPAD_PRIOR NUMPAD_PAGEUP NUMPAD_NEXT
+NUMPAD_PAGEDOWN NUMPAD_END NUMPAD_BEGIN NUMPAD_INSERT NUMPAD_DELETE
+NUMPAD_EQUAL NUMPAD_MULTIPLY NUMPAD_ADD NUMPAD_SEPARATOR NUMPAD_SUBTRACT
+NUMPAD_DECIMAL NUMPAD_DIVIDE</blockquote>
+
+
+
+</a>
+<table><tr><td width="50%"><p><a href="index.html">Peppy 0.16.0 User Manual</a> &raquo;</p></td><td width="50%" align="right"><p>
+<a href="running.html" title="Up and Running with Peppy">previous</a> |
+<a href="Fundamental.html" title="Text Editing Basics *">next</a> |
+<a href="genindex.html" title="General Index">index</a></p></td></tr></table>
+<div class="footer">
+Updated 24 Feb 2011 by Rob McMullen &lt;robm at flipturn.org&gt;
+</div>
+</body>
+</html>

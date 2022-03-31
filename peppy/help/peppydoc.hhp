@@ -1,0 +1,40 @@
+[OPTIONS]
+Binary TOC=Yes
+Binary Index=No
+Compiled file=peppydoc.chm
+Contents file=peppydoc.hhc
+Default Window=peppydoc
+Default topic=index.html
+Display compile progress=No
+Full text search stop list file=peppydoc.stp
+Full-text search=Yes
+Index file=peppydoc.hhk
+Language=0x409
+Title=Peppy 0.16.0 User Manual
+
+[WINDOWS]
+peppydoc="Peppy 0.16.0 User Manual","peppydoc.hhc","peppydoc.hhk","index.html","index.html",,,,,0x63520,220,0x10384e,[0,0,1024,768],,,,,,,0
+
+[FILES]
+Python.html
+Search.html
+concepts.html
+HexEdit.html
+preferences.html
+HSI.html
+genindex.html
+running.html
+project.html
+intro.html
+index.html
+macros.html
+Fundamental.html
+work-in-progress.html
+_static\minus.png
+_static\pygments.css
+_static\basic.css
+_static\default.css
+_static\peppy-web-logo.png
+_static\plus.png
+_static\file.png
+_static\peppy256.png

@@ -1,0 +1,454 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<!-- Sitemap 1.0 -->
+</HEAD><BODY>
+<OBJECT type="text/site properties">
+        <param name="Window Styles" value="0x801227">
+        <param name="ImageType" value="Folder">
+</OBJECT>
+<UL>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Peppy 0.16.0 User Manual">
+    <param name="Local" value="index.html">
+</OBJECT>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Introduction">
+    <param name="Local" value="intro.html">
+</OBJECT>
+<UL>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Target Audience">
+    <param name="Local" value="intro.html#target-audience">
+</OBJECT>
+<UL>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Editing Source Code">
+    <param name="Local" value="intro.html#editing-source-code">
+</OBJECT>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Other Editing Modes">
+    <param name="Local" value="intro.html#other-editing-modes">
+</OBJECT>
+</UL>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Cross Platform">
+    <param name="Local" value="intro.html#cross-platform">
+</OBJECT>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="GPL Licensed">
+    <param name="Local" value="intro.html#gpl-licensed">
+</OBJECT>
+</UL>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Concepts">
+    <param name="Local" value="concepts.html">
+</OBJECT>
+<UL>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="User Interface">
+    <param name="Local" value="concepts.html#user-interface">
+</OBJECT>
+<UL>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Top Level Windows">
+    <param name="Local" value="concepts.html#top-level-windows">
+</OBJECT>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Major Modes">
+    <param name="Local" value="concepts.html#major-modes">
+</OBJECT>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Menu Bar">
+    <param name="Local" value="concepts.html#menu-bar">
+</OBJECT>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Tool Bar">
+    <param name="Local" value="concepts.html#tool-bar">
+</OBJECT>
+</UL>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Files as URLs">
+    <param name="Local" value="concepts.html#files-as-urls">
+</OBJECT>
+<UL>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Automatic Recognition of File Type">
+    <param name="Local" value="concepts.html#automatic-recognition-of-file-type">
+</OBJECT>
+</UL>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Network File Systems">
+    <param name="Local" value="concepts.html#network-file-systems">
+</OBJECT>
+<UL>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="HTTP">
+    <param name="Local" value="concepts.html#http">
+</OBJECT>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="WebDAV">
+    <param name="Local" value="concepts.html#webdav">
+</OBJECT>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="SFTP">
+    <param name="Local" value="concepts.html#sftp">
+</OBJECT>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Other Network File Systems">
+    <param name="Local" value="concepts.html#other-network-file-systems">
+</OBJECT>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Special File Systems">
+    <param name="Local" value="concepts.html#special-file-systems">
+</OBJECT>
+</UL>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Documents and Views">
+    <param name="Local" value="concepts.html#documents-and-views">
+</OBJECT>
+</UL>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Up and Running with Peppy">
+    <param name="Local" value="running.html">
+</OBJECT>
+<UL>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Command Line Use">
+    <param name="Local" value="running.html#command-line-use">
+</OBJECT>
+<UL>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Options">
+    <param name="Local" value="running.html#options">
+</OBJECT>
+</UL>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Single Peppy Process">
+    <param name="Local" value="running.html#single-peppy-process">
+</OBJECT>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Using the Basic Menu Functions">
+    <param name="Local" value="running.html#using-the-basic-menu-functions">
+</OBJECT>
+<UL>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Opening Files">
+    <param name="Local" value="running.html#opening-files">
+</OBJECT>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Editing Files">
+    <param name="Local" value="running.html#editing-files">
+</OBJECT>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Saving Files">
+    <param name="Local" value="running.html#saving-files">
+</OBJECT>
+</UL>
+</UL>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Customization and Preferences">
+    <param name="Local" value="preferences.html">
+</OBJECT>
+<UL>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Using the Preferences Dialog">
+    <param name="Local" value="preferences.html#using-the-preferences-dialog">
+</OBJECT>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Changing Text Styles">
+    <param name="Local" value="preferences.html#changing-text-styles">
+</OBJECT>
+<UL>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Changing Fonts">
+    <param name="Local" value="preferences.html#changing-fonts">
+</OBJECT>
+</UL>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Configuration Files">
+    <param name="Local" value="preferences.html#configuration-files">
+</OBJECT>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Internationalization (i18n)">
+    <param name="Local" value="preferences.html#internationalization-i18n">
+</OBJECT>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Key Bindings">
+    <param name="Local" value="preferences.html#key-bindings">
+</OBJECT>
+<UL>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Configuring Key Bindings">
+    <param name="Local" value="preferences.html#configuring-key-bindings">
+</OBJECT>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Describing Keystrokes">
+    <param name="Local" value="preferences.html#describing-keystrokes">
+</OBJECT>
+</UL>
+</UL>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Text Editing Basics *">
+    <param name="Local" value="Fundamental.html">
+</OBJECT>
+<UL>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Fundamental Mode">
+    <param name="Local" value="Fundamental.html#fundamental-mode">
+</OBJECT>
+<UL>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Hierarchies of Major Modes">
+    <param name="Local" value="Fundamental.html#hierarchies-of-major-modes">
+</OBJECT>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Scintilla and the Styled Text Control">
+    <param name="Local" value="Fundamental.html#scintilla-and-the-styled-text-control">
+</OBJECT>
+</UL>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="View Settings">
+    <param name="Local" value="Fundamental.html#view-settings">
+</OBJECT>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Cut, Copy, and Paste">
+    <param name="Local" value="Fundamental.html#cut-copy-and-paste">
+</OBJECT>
+<UL>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Middle Mouse Paste">
+    <param name="Local" value="Fundamental.html#middle-mouse-paste">
+</OBJECT>
+</UL>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Undo and Redo">
+    <param name="Local" value="Fundamental.html#undo-and-redo">
+</OBJECT>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Find and Replace">
+    <param name="Local" value="Fundamental.html#find-and-replace">
+</OBJECT>
+<UL>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Wildcard / Shell Style">
+    <param name="Local" value="Fundamental.html#wildcard-shell-style">
+</OBJECT>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Regular Expressions">
+    <param name="Local" value="Fundamental.html#regular-expressions">
+</OBJECT>
+</UL>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Running Scripts">
+    <param name="Local" value="Fundamental.html#running-scripts">
+</OBJECT>
+<UL>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Filters">
+    <param name="Local" value="Fundamental.html#filters">
+</OBJECT>
+</UL>
+</UL>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Macros *">
+    <param name="Local" value="macros.html">
+</OBJECT>
+<UL>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Hierarchical Macros">
+    <param name="Local" value="macros.html#hierarchical-macros">
+</OBJECT>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Recording Macros">
+    <param name="Local" value="macros.html#recording-macros">
+</OBJECT>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Playback of Macros">
+    <param name="Local" value="macros.html#playback-of-macros">
+</OBJECT>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Macro Minor Mode">
+    <param name="Local" value="macros.html#macro-minor-mode">
+</OBJECT>
+<UL>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Editing Macros">
+    <param name="Local" value="macros.html#editing-macros">
+</OBJECT>
+</UL>
+</UL>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Projects">
+    <param name="Local" value="project.html">
+</OBJECT>
+<UL>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Peppy's Concept of Projects">
+    <param name="Local" value="project.html#peppy-s-concept-of-projects">
+</OBJECT>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Setting Up Projects">
+    <param name="Local" value="project.html#setting-up-projects">
+</OBJECT>
+<UL>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="New Projects">
+    <param name="Local" value="project.html#new-projects">
+</OBJECT>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Existing Projects">
+    <param name="Local" value="project.html#existing-projects">
+</OBJECT>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Project Configuration Dialog">
+    <param name="Local" value="project.html#project-configuration-dialog">
+</OBJECT>
+</UL>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Source Code Control">
+    <param name="Local" value="project.html#source-code-control">
+</OBJECT>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Templates">
+    <param name="Local" value="project.html#templates">
+</OBJECT>
+<UL>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Creating Templates">
+    <param name="Local" value="project.html#creating-templates">
+</OBJECT>
+</UL>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Building">
+    <param name="Local" value="project.html#building">
+</OBJECT>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Running">
+    <param name="Local" value="project.html#running">
+</OBJECT>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="CTAGS Support">
+    <param name="Local" value="project.html#ctags-support">
+</OBJECT>
+</UL>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Search Mode">
+    <param name="Local" value="Search.html">
+</OBJECT>
+<UL>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="The Search Window">
+    <param name="Local" value="Search.html#the-search-window">
+</OBJECT>
+<UL>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Search Criteria">
+    <param name="Local" value="Search.html#search-criteria">
+</OBJECT>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Search Results">
+    <param name="Local" value="Search.html#search-results">
+</OBJECT>
+</UL>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Search Types">
+    <param name="Local" value="Search.html#search-types">
+</OBJECT>
+<UL>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Text Search">
+    <param name="Local" value="Search.html#text-search">
+</OBJECT>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Numeric Search">
+    <param name="Local" value="Search.html#numeric-search">
+</OBJECT>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Expandability">
+    <param name="Local" value="Search.html#expandability">
+</OBJECT>
+</UL>
+</UL>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Work in Progress">
+    <param name="Local" value="work-in-progress.html">
+</OBJECT>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Python Major Mode">
+    <param name="Local" value="Python.html">
+</OBJECT>
+<UL>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Introducing Python Mode">
+    <param name="Local" value="Python.html#introducing-python-mode">
+</OBJECT>
+<UL>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Automatic Indentation">
+    <param name="Local" value="Python.html#automatic-indentation">
+</OBJECT>
+</UL>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Running Python Scripts">
+    <param name="Local" value="Python.html#running-python-scripts">
+</OBJECT>
+</UL>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="HexEdit Major Mode">
+    <param name="Local" value="HexEdit.html">
+</OBJECT>
+<UL>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="The Editing Window">
+    <param name="Local" value="HexEdit.html#the-editing-window">
+</OBJECT>
+</UL>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Hyperspectral Image Major Mode">
+    <param name="Local" value="HSI.html">
+</OBJECT>
+<UL>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="What is Hyperspectral Imagery?">
+    <param name="Local" value="HSI.html#what-is-hyperspectral-imagery">
+</OBJECT>
+<UL>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Hyperspectral Image Data">
+    <param name="Local" value="HSI.html#hyperspectral-image-data">
+</OBJECT>
+<UL>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Raw Formats">
+    <param name="Local" value="HSI.html#raw-formats">
+</OBJECT>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Compressed Formats and GDAL">
+    <param name="Local" value="HSI.html#compressed-formats-and-gdal">
+</OBJECT>
+</UL>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Sample Images">
+    <param name="Local" value="HSI.html#sample-images">
+</OBJECT>
+</UL>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Hyperspectral Images in Peppy">
+    <param name="Local" value="HSI.html#hyperspectral-images-in-peppy">
+</OBJECT>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Starting HSI Mode">
+    <param name="Local" value="HSI.html#starting-hsi-mode">
+</OBJECT>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Changing View Parameters">
+    <param name="Local" value="HSI.html#changing-view-parameters">
+</OBJECT>
+<LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="Using Profile Plots">
+    <param name="Local" value="HSI.html#using-profile-plots">
+</OBJECT>
+</UL>
+</UL></BODY></HTML>

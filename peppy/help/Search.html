@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Search Mode</title>
+
+
+
+
+
+</head>
+<body>
+<div id="titleLine">
+<a href="http://peppy.flipturn.org/"><img src="_static/peppy-web-logo.png" alt="peppy - (ap)Proximated (X)Emacs Powered by Python" /></a>
+</div>
+<table><tr><td width="50%"><p><a href="index.html">Peppy 0.16.0 User Manual</a> &raquo;</p></td><td width="50%" align="right"><p>
+<a href="project.html" title="Projects" accesskey="P">previous</a> |
+<a href="work-in-progress.html" title="Work in Progress" accesskey="N">next</a> |
+<a href="genindex.html" title="General Index" accesskey="I">index</a></p></td></tr></table>
+<a name="search-mode">
+<h1>Search Mode</h1>
+<p id="search">Search Mode scans through a set of files looking for matches.  It is similar
+to the &#8216;grep&#8217; command in unix, but is much more powerful because it can be
+extended to search for matches based on context or based on characteristics in
+certain types of files.</p>
+<a name="the-search-window"></a>
+<h2>The Search Window</h2>
+<div align="center" class="align-center"><p></p><img alt="_images/peppy-search-mode.jpg" class="align-center" src="_images/peppy-search-mode.jpg" /></div>
+<p>The main search mode window is split into two sections, the top is for entering
+search criteria, and the bottom is a list that displays the results of the
+search.</p>
+<a name="search-criteria"></a>
+<h3>Search Criteria</h3>
+<p>The top section of the search mode window contains the search criteria,
+defining what you are searching for and which files to scan.  There are four
+sections to the search criteria: the search string, the type of search, how to
+choose the files to search, and the files to ignore.</p>
+<div align="center" class="align-center"><p></p><img alt="_images/peppy-search-criteria.png" class="align-center" src="_images/peppy-search-criteria.png" /></div>
+<p>The first line is the search string, which in the simplest case is the exact
+string that you wish to find.  In more complex cases, it can be a regular
+expression, a comparison, or another format depending on the type of search.</p>
+<p>The type of search is what makes Peppy&#8217;s search so powerful.  The type is
+selected by a pull-down list, and additional types can be added through
+plugins.  The default search types are <strong>Text Search</strong> which provides the usual
+text search operations (whether or not the case is significant, and regular
+expressions for advanced pattern matching), and <strong>Numeric Search</strong> which scans
+through text files and compares numbers that it finds with the comparison
+defined by the search string.  The search types are described in more detail
+below.</p>
+<p>Files can be chosen in a number of ways by selecting from a pull-down list.
+(Note this can also be extended by plugins.) Currently, the available options
+are <strong>Directory</strong>, <strong>Project</strong>, and <strong>Open Documents</strong>.  The <strong>Directory</strong>
+option will perform its search starting with all files in the named directory,
+and continue recursively through all subdirectories.  The <strong>Project</strong> option
+will limit itself to only those files contained in the selected project (see
+<a class="reference external" href="project.html#id1"><em>Peppy&#8217;s Concept of Projects</em></a> for more information and how to define projects).  The <strong>Open
+Documents</strong> option limits the search to only those documents that are already
+open in peppy; that is, only those documents that appear in the <strong>Documents</strong>
+menu.</p>
+<p>Finally, the <strong>Ignore Names</strong> criteria is a list of filename extensions to skip
+in the search process.</p>
+<p>Pressing the <strong>Start</strong> button (or using either the <strong>Actions -&gt; Start Search</strong>
+menu item or the start search icon on the toolbar) will begin the search
+process.  An error that causes the search to fail will show up in the status
+bar, otherwise the search will display results as they are discovered.  Note
+that you can continue to work in other tabs or peppy windows as the search
+operates because the search is performed in a separate thread.</p>
+
+<a name="search-results"></a>
+<h3>Search Results</h3>
+<p>The bottom section of the search mode window is a list that will be populated
+with the results of the search.  The list is broken up into three columns: the
+filename of the match, the line number, and the matching line.  Each line in
+the list represents a matching line in a file.</p>
+<div align="center" class="align-center"><p></p><img alt="_images/peppy-search-results.png" class="align-center" src="_images/peppy-search-results.png" /></div>
+<p>The first column contains the filename of the match.  Common directory prefixes
+will be removed to save space if searching in a directory or project where all
+the matches have a common directory prefix.</p>
+<p>The second column contains the line number of the match.  Line numbers start
+from 1.  Note that multiple matches on the same line will only be shown once
+in the list.</p>
+<p>The third column contains the matching line.  In future versions, multiple
+matches in the line will be highlighted, but at the moment only the line
+itself is displayed.</p>
+
+
+<a name="search-types"></a>
+<h2>Search Types</h2>
+<p>One of the differences between peppy and other search programs is the search
+type.  Using the search type, text can be matched based on criteria, not just
+matching characters.</p>
+<p>Currently, there are two search types distributed with peppy: <strong>Text Search</strong>
+and <strong>Numeric Search</strong>.</p>
+<a name="text-search"></a>
+<h3>Text Search</h3>
+<p>Text search is much like the basic search capabilities of normal editors.  You
+can search with or without case sensitivity, and you can choose to use regular
+expressions for advanced searching.</p>
+<p>By default, text is matched without regard to case.  If you would like case to
+be significant in the match, check the <strong>Match Case</strong> checkbox.</p>
+<p>Regular expressions are available by checking the <strong>Regular Expression</strong>
+checkbox.  The search string is then taken as a regular expression (or
+<em>regex</em>) and lines in files will be matched against the regex.  Regular
+expressions, if you haven&#8217;t used them much, can be complicated. From  the <a class="reference external" href="http://docs.python.org/release/2.5/lib/re-syntax.html">Python</a> documentation, here&#8217;s a short summary of regular expressions:</p>
+<blockquote>
+<p>Regular expressions can contain both special and ordinary characters. Most ordinary characters, like <strong>A</strong>, <strong>a</strong>, or <strong>0</strong>, are the simplest regular expressions; they simply match themselves. You can concatenate ordinary characters, so <strong>last</strong> matches the string &#8216;last&#8217;. (In the rest of this section, we&#8217;ll write regexes in this bold style, and strings to be matched &#8216;in single quotes&#8217;.)</p>
+<p>Some characters, like <strong>|</strong> or <strong>(</strong>, are special. Special characters either stand for classes of ordinary characters, or affect how the regular expressions around them are interpreted.</p>
+<p>Some of the special characters include:</p>
+<dl class="docutils">
+<dt><strong>.</strong></dt>
+<dd>(Dot.) In the default mode, this matches any character except a newline. If the DOTALL flag has been specified, this matches any character including a newline.</dd>
+<dt><strong>^</strong></dt>
+<dd>(Caret.) Matches the start of the string.</dd>
+<dt><strong>$</strong></dt>
+<dd>Matches the end of the string or just before the newline at the end of the string. <strong>foo</strong> matches both &#8216;foo&#8217; and &#8216;foobar&#8217;, while the regular expression <strong>foo$</strong> matches only &#8216;foo&#8217;.</dd>
+<dt><strong>*</strong></dt>
+<dd>Causes the resulting RE to match 0 or more repetitions of the preceding RE, as many repetitions as are possible. <strong>ab*</strong> will match &#8216;a&#8217;, &#8216;ab&#8217;, or &#8216;a&#8217; followed by any number of &#8216;b&#8217;s.</dd>
+<dt><strong>+</strong></dt>
+<dd>Causes the resulting RE to match 1 or more repetitions of the preceding RE. <strong>ab+</strong> will match &#8216;a&#8217; followed by any non-zero number of &#8216;b&#8217;s; it will not match just &#8216;a&#8217;.</dd>
+<dt><strong>?</strong></dt>
+<dd>Causes the resulting RE to match 0 or 1 repetitions of the preceding RE. <strong>ab?</strong> will match either &#8216;a&#8217; or &#8216;ab&#8217;.</dd>
+<dt><strong>\</strong></dt>
+<dd>Either escapes special characters (permitting you to match characters like &#8220;\&#8221;, &#8220;?&#8221;, and so forth), or signals a special sequence; special sequences are discussed below.</dd>
+<dt><strong>[]</strong></dt>
+<dd>Used to indicate a set of characters. Characters can be listed individually, or a range of characters can be indicated by giving two characters and separating them by a &#8220;-&#8220;. Special characters are not active inside sets. For example, <strong>[akm$]</strong> will match any of the characters &#8220;a&#8221;, &#8220;k&#8221;, &#8220;m&#8221;, or &#8220;$&#8221;; <strong>[a-z]</strong> will match any lowercase letter, and <strong>[a-zA-Z0-9]</strong> matches any letter or digit. Character classes such as <strong>\w</strong> or <strong>\S</strong> (defined <a class="reference external" href="http://docs.python.org/release/2.5/lib/re-syntax.html">here</a>) are also acceptable inside a range. If you want to include a &#8220;]&#8221; or a &#8220;-&#8221; inside a set, precede it with a backslash, or place it as the first character. The pattern <strong>[]]</strong> will match &#8216;]&#8217;, for example.
+<dd><p>You can match the characters not within a range by complementing the set. This is indicated by including a &#8220;^&#8221; as the first character of the set; &#8220;^&#8221; elsewhere will simply match the &#8220;^&#8221; character. For example, <strong>[^5]</strong> will match any character except &#8220;5&#8221;, and <strong>[^^]</strong> will match any character except &#8220;^&#8221;.</p></dd>
+</dd>
+<dt><strong>|</strong></dt>
+<dd>A|B, where A and B can be arbitrary REs, creates a regular expression that will match either A or B. An arbitrary number of REs can be separated by the &#8220;|&#8221; in this way. This can be used inside groups (see below) as well. As the target string is scanned, REs separated by &#8220;|&#8221; are tried from left to right. When one pattern completely matches, that branch is accepted. This means that once A matches, B will not be tested further, even if it would produce a longer overall match. In other words, the &#8220;|&#8221; operator is never greedy. To match a literal &#8220;|&#8221;, use <strong>\|</strong>, or enclose it inside a character class, as in <strong>[|]</strong>.</dd>
+<dt><strong>(</strong> ... <strong>)</strong></dt>
+<dd>Matches whatever regular expression is inside the parentheses, and indicates the start and end of a group; the contents of a group can be matched later in the string with the <strong>\</strong><em>number</em> special sequence, described below. To match the literals &#8220;(&#8221; or &#8220;)&#8221;, use <strong>\(</strong> or <strong>\)</strong>, or enclose them inside a character class: <strong>[(]</strong> or <strong>[)]</strong>.</dd>
+<dt><strong>\</strong><em>number</em></dt>
+<dd>Matches the contents of the group of the same number. Groups are numbered starting from 1. For example, <strong>(.+) 1</strong> matches &#8216;the the&#8217; or &#8216;55 55&#8217;, but not &#8216;the end&#8217; (note the space after the group). This special sequence can only be used to match one of the first 99 groups. If the first digit of number is 0, or number is 3 octal digits long, it will not be interpreted as a group match, but as the character with octal value number. Inside the &#8220;[&#8221; and &#8220;]&#8221; of a character class, all numeric escapes are treated as characters.</dd>
+</dl>
+</blockquote>
+<p>See <a class="reference external" href="http://docs.python.org/release/2.5/lib/re-syntax.html">http://docs.python.org/release/2.5/lib/re-syntax.html</a> for descriptions
+of more advanced regular expression components, or see the following for
+additional references:</p>
+<blockquote>
+<ul class="simple">
+<li><a class="reference external" href="http://en.wikipedia.org/wiki/Regular_expression">http://en.wikipedia.org/wiki/Regular_expression</a></li>
+<li><a class="reference external" href="http://www.regular-expressions.info/reference.html">http://www.regular-expressions.info/reference.html</a></li>
+</ul>
+</blockquote>
+
+<a name="numeric-search"></a>
+<h3>Numeric Search</h3>
+<p>Beyond simple text or regular expression searching, Peppy can search through
+text files for numbers and perform matches based on comparisons with a
+reference number.  Selecting the <strong>Numeric Search</strong> item from the <strong>Search Type</strong> pulldown menu activates this search type.</p>
+<div align="center" class="align-center"><p></p><img alt="_images/peppy-search-numeric.png" class="align-center" src="_images/peppy-search-numeric.png" /></div>
+<p>The <strong>Search for:</strong> field then becomes the place to specify the reference
+number and the comparison operator.  For example, specifying &#8220;&gt;1000&#8221; will
+result in matches for all lines that have a number in them where the number
+is greater than 1000.  Operators available are <strong>&lt;</strong>, <strong>&lt;=</strong>, <strong>=</strong>, <strong>&gt;=</strong>,
+<strong>&gt;</strong> and all whitespace is ignored.</p>
+<p>By default the search is performed using decimal numbers (both floating
+point and integer values ore found), but the <strong>Hexadecimal</strong> option may be
+selected by selecting the checkbox.  Hex search finds all hex values in the
+text that are formatted with a leading <strong>0x</strong> or trailing <strong>h</strong> (like 0x2468,
+0xdeadbeef, fdb97531h, 2badh, etc.) and compares them to the reference value.
+The same comparison operators are available when using hexadecimal mode.</p>
+
+<a name="expandability"></a>
+<h3>Expandability</h3>
+<p>The types of searches can be expanded through Peppy plugins, so more types may
+be available.</p>
+
+
+
+</a>
+<table><tr><td width="50%"><p><a href="index.html">Peppy 0.16.0 User Manual</a> &raquo;</p></td><td width="50%" align="right"><p>
+<a href="project.html" title="Projects">previous</a> |
+<a href="work-in-progress.html" title="Work in Progress">next</a> |
+<a href="genindex.html" title="General Index">index</a></p></td></tr></table>
+<div class="footer">
+Updated 24 Feb 2011 by Rob McMullen &lt;robm at flipturn.org&gt;
+</div>
+</body>
+</html>

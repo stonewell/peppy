@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Text Editing Basics *</title>
+
+
+
+
+
+</head>
+<body>
+<div id="titleLine">
+<a href="http://peppy.flipturn.org/"><img src="_static/peppy-web-logo.png" alt="peppy - (ap)Proximated (X)Emacs Powered by Python" /></a>
+</div>
+<table><tr><td width="50%"><p><a href="index.html">Peppy 0.13.4 User Manual</a> &raquo;</p></td><td width="50%" align="right"><p>
+<a href="preferences.html" title="Customization and Preferences" accesskey="P">previous</a> |
+<a href="macros.html" title="Macros *" accesskey="N">next</a> |
+<a href="genindex.html" title="General Index" accesskey="I">index</a></p></td></tr></table>
+<a name="text-editing-basics">
+<h1>Text Editing Basics *</h1>
+<a name="fundamental-mode"></a>
+<a name="fundamental"></a><h2>Fundamental Mode</h2>
+<p>Fundamental mode is the basis for all source code editing modes in peppy.
+All of the text editing functions that are common to more than one mode are
+generally placed in Fundamental mode.  If you&#8217;re familiar with object oriented
+programming concepts, Fundamental mode is the <em>superclass</em> of the other text
+editing modes.</p>
+<a name="hierarchies-of-major-modes"></a>
+<a name="hierarchies"></a><h3>Hierarchies of Major Modes</h3>
+<p>There are different hierarchies of major modes in peppy, but the primary
+hierarchical tree starts from Fundamental mode.  Major modes that are used
+to edit text files descend from Fundamental mode, and therefore are part of
+this hierarchy.</p>
+<p>Hierarchies are important because many of the commands available in Peppy are
+based on the major mode of the current file.  Actions are only presented to
+you in the menubar and toolbar if they&#8217;re appropriate to the major mode.  For
+instance, when editing text files, it doesn&#8217;t make sense to include actions
+used to edit images.</p>
+<p>The major mode hierarchy starting with Fundamental mode includes Python
+mode, C++ mode, Bash mode, and all the other modes used to edit source code.
+Fundamental mode is the more general major mode, so all actions available for
+Fundamental mode are available to Python mode, for instance.  However, Python
+mode actions are not available to Fundamental mode.</p>
+
+<a name="scintilla-and-the-styled-text-control"></a>
+<h3>Scintilla and the Styled Text Control</h3>
+<p>Peppy uses the wxPython component called the StyledTextCtrl for its user
+interface, which is based on the source code editing component called
+<a class="reference" href="www.scintilla.org">Scintilla</a>.  Scintilla and the StyledTextCtrl supply the highlighting, syntax
+coloring, code folding, line numbers, word wrapping, and many more built-in
+features.  Additionally, due to the cross-platform nature of both wxPython and
+Scintilla, peppy operates in very similarly across the three major classes of
+operating systems supported by wxPython: unix-like systems, Windows, and Mac
+OS X.</p>
+
+
+<a name="view-settings"></a>
+<h2>View Settings</h2>
+
+<a name="cut-copy-and-paste"></a>
+<h2>Cut, Copy, and Paste</h2>
+<a name="middle-mouse-paste"></a>
+<h3>Middle Mouse Paste</h3>
+
+
+<a name="undo-and-redo"></a>
+<h2>Undo and Redo</h2>
+
+<a name="find-and-replace"></a>
+<h2>Find and Replace</h2>
+<a name="wildcard-shell-style"></a>
+<h3>Wildcard / Shell Style</h3>
+
+<a name="regular-expressions"></a>
+<h3>Regular Expressions</h3>
+
+
+<a name="running-scripts"></a>
+<h2>Running Scripts</h2>
+<a name="filters"></a>
+<h3>Filters</h3>
+
+
+
+</a>
+<table><tr><td width="50%"><p><a href="index.html">Peppy 0.13.4 User Manual</a> &raquo;</p></td><td width="50%" align="right"><p>
+<a href="preferences.html" title="Customization and Preferences">previous</a> |
+<a href="macros.html" title="Macros *">next</a> |
+<a href="genindex.html" title="General Index">index</a></p></td></tr></table>
+<div class="footer">
+Updated 12 Nov 2009 by Rob McMullen &lt;robm at flipturn.org&gt;
+</div>
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>User Manual</title>
+
+
+
+
+</head>
+<body>
+<div id="titleLine">
+<a href="http://peppy.flipturn.org/"><img src="_static/peppy-web-logo.png" alt="peppy - (ap)Proximated (X)Emacs Powered by Python" /></a>
+</div>
+<table><tr><td width="50%"><p><a href="#">Peppy 0.16.0 User Manual</a> &raquo;</p></td><td width="50%" align="right"><p>
+<a href="intro.html" title="Introduction" accesskey="N">next</a> |
+<a href="genindex.html" title="General Index" accesskey="I">index</a></p></td></tr></table>
+<a name="user-manual">
+<h1>User Manual</h1>
+<p>Contents:</p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="intro.html">Introduction</a><ul>
+<li class="toctree-l2"><a class="reference external" href="intro.html#target-audience">Target Audience</a><ul>
+<li class="toctree-l3"><a class="reference external" href="intro.html#editing-source-code">Editing Source Code</a></li>
+<li class="toctree-l3"><a class="reference external" href="intro.html#other-editing-modes">Other Editing Modes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference external" href="intro.html#cross-platform">Cross Platform</a></li>
+<li class="toctree-l2"><a class="reference external" href="intro.html#gpl-licensed">GPL Licensed</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference external" href="concepts.html">Concepts</a><ul>
+<li class="toctree-l2"><a class="reference external" href="concepts.html#user-interface">User Interface</a><ul>
+<li class="toctree-l3"><a class="reference external" href="concepts.html#top-level-windows">Top Level Windows</a></li>
+<li class="toctree-l3"><a class="reference external" href="concepts.html#major-modes">Major Modes</a></li>
+<li class="toctree-l3"><a class="reference external" href="concepts.html#menu-bar">Menu Bar</a></li>
+<li class="toctree-l3"><a class="reference external" href="concepts.html#tool-bar">Tool Bar</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference external" href="concepts.html#files-as-urls">Files as URLs</a><ul>
+<li class="toctree-l3"><a class="reference external" href="concepts.html#automatic-recognition-of-file-type">Automatic Recognition of File Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference external" href="concepts.html#network-file-systems">Network File Systems</a><ul>
+<li class="toctree-l3"><a class="reference external" href="concepts.html#http">HTTP</a></li>
+<li class="toctree-l3"><a class="reference external" href="concepts.html#webdav">WebDAV</a></li>
+<li class="toctree-l3"><a class="reference external" href="concepts.html#sftp">SFTP</a></li>
+<li class="toctree-l3"><a class="reference external" href="concepts.html#other-network-file-systems">Other Network File Systems</a></li>
+<li class="toctree-l3"><a class="reference external" href="concepts.html#special-file-systems">Special File Systems</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference external" href="concepts.html#documents-and-views">Documents and Views</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference external" href="running.html">Up and Running with Peppy</a><ul>
+<li class="toctree-l2"><a class="reference external" href="running.html#command-line-use">Command Line Use</a><ul>
+<li class="toctree-l3"><a class="reference external" href="running.html#options">Options</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference external" href="running.html#single-peppy-process">Single Peppy Process</a></li>
+<li class="toctree-l2"><a class="reference external" href="running.html#using-the-basic-menu-functions">Using the Basic Menu Functions</a><ul>
+<li class="toctree-l3"><a class="reference external" href="running.html#opening-files">Opening Files</a></li>
+<li class="toctree-l3"><a class="reference external" href="running.html#editing-files">Editing Files</a></li>
+<li class="toctree-l3"><a class="reference external" href="running.html#saving-files">Saving Files</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference external" href="preferences.html">Customization and Preferences</a><ul>
+<li class="toctree-l2"><a class="reference external" href="preferences.html#using-the-preferences-dialog">Using the Preferences Dialog</a></li>
+<li class="toctree-l2"><a class="reference external" href="preferences.html#changing-text-styles">Changing Text Styles</a><ul>
+<li class="toctree-l3"><a class="reference external" href="preferences.html#changing-fonts">Changing Fonts</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference external" href="preferences.html#configuration-files">Configuration Files</a></li>
+<li class="toctree-l2"><a class="reference external" href="preferences.html#internationalization-i18n">Internationalization (i18n)</a></li>
+<li class="toctree-l2"><a class="reference external" href="preferences.html#key-bindings">Key Bindings</a><ul>
+<li class="toctree-l3"><a class="reference external" href="preferences.html#configuring-key-bindings">Configuring Key Bindings</a></li>
+<li class="toctree-l3"><a class="reference external" href="preferences.html#describing-keystrokes">Describing Keystrokes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference external" href="Fundamental.html">Text Editing Basics *</a><ul>
+<li class="toctree-l2"><a class="reference external" href="Fundamental.html#fundamental-mode">Fundamental Mode</a><ul>
+<li class="toctree-l3"><a class="reference external" href="Fundamental.html#hierarchies-of-major-modes">Hierarchies of Major Modes</a></li>
+<li class="toctree-l3"><a class="reference external" href="Fundamental.html#scintilla-and-the-styled-text-control">Scintilla and the Styled Text Control</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference external" href="Fundamental.html#view-settings">View Settings</a></li>
+<li class="toctree-l2"><a class="reference external" href="Fundamental.html#cut-copy-and-paste">Cut, Copy, and Paste</a><ul>
+<li class="toctree-l3"><a class="reference external" href="Fundamental.html#middle-mouse-paste">Middle Mouse Paste</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference external" href="Fundamental.html#undo-and-redo">Undo and Redo</a></li>
+<li class="toctree-l2"><a class="reference external" href="Fundamental.html#find-and-replace">Find and Replace</a><ul>
+<li class="toctree-l3"><a class="reference external" href="Fundamental.html#wildcard-shell-style">Wildcard / Shell Style</a></li>
+<li class="toctree-l3"><a class="reference external" href="Fundamental.html#regular-expressions">Regular Expressions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference external" href="Fundamental.html#running-scripts">Running Scripts</a><ul>
+<li class="toctree-l3"><a class="reference external" href="Fundamental.html#filters">Filters</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference external" href="macros.html">Macros *</a><ul>
+<li class="toctree-l2"><a class="reference external" href="macros.html#hierarchical-macros">Hierarchical Macros</a></li>
+<li class="toctree-l2"><a class="reference external" href="macros.html#recording-macros">Recording Macros</a></li>
+<li class="toctree-l2"><a class="reference external" href="macros.html#playback-of-macros">Playback of Macros</a></li>
+<li class="toctree-l2"><a class="reference external" href="macros.html#macro-minor-mode">Macro Minor Mode</a><ul>
+<li class="toctree-l3"><a class="reference external" href="macros.html#editing-macros">Editing Macros</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference external" href="project.html">Projects</a><ul>
+<li class="toctree-l2"><a class="reference external" href="project.html#peppy-s-concept-of-projects">Peppy&#8217;s Concept of Projects</a></li>
+<li class="toctree-l2"><a class="reference external" href="project.html#setting-up-projects">Setting Up Projects</a><ul>
+<li class="toctree-l3"><a class="reference external" href="project.html#new-projects">New Projects</a></li>
+<li class="toctree-l3"><a class="reference external" href="project.html#existing-projects">Existing Projects</a></li>
+<li class="toctree-l3"><a class="reference external" href="project.html#project-configuration-dialog">Project Configuration Dialog</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference external" href="project.html#source-code-control">Source Code Control</a></li>
+<li class="toctree-l2"><a class="reference external" href="project.html#templates">Templates</a><ul>
+<li class="toctree-l3"><a class="reference external" href="project.html#creating-templates">Creating Templates</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference external" href="project.html#building">Building</a></li>
+<li class="toctree-l2"><a class="reference external" href="project.html#running">Running</a></li>
+<li class="toctree-l2"><a class="reference external" href="project.html#ctags-support">CTAGS Support</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference external" href="Search.html">Search Mode</a><ul>
+<li class="toctree-l2"><a class="reference external" href="Search.html#the-search-window">The Search Window</a><ul>
+<li class="toctree-l3"><a class="reference external" href="Search.html#search-criteria">Search Criteria</a></li>
+<li class="toctree-l3"><a class="reference external" href="Search.html#search-results">Search Results</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference external" href="Search.html#search-types">Search Types</a><ul>
+<li class="toctree-l3"><a class="reference external" href="Search.html#text-search">Text Search</a></li>
+<li class="toctree-l3"><a class="reference external" href="Search.html#numeric-search">Numeric Search</a></li>
+<li class="toctree-l3"><a class="reference external" href="Search.html#expandability">Expandability</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference external" href="work-in-progress.html">Work in Progress</a></li>
+</ul>
+<p>Text Editing Major Modes:</p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="Python.html">Python Major Mode</a><ul>
+<li class="toctree-l2"><a class="reference external" href="Python.html#introducing-python-mode">Introducing Python Mode</a><ul>
+<li class="toctree-l3"><a class="reference external" href="Python.html#automatic-indentation">Automatic Indentation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference external" href="Python.html#running-python-scripts">Running Python Scripts</a></li>
+</ul>
+</li>
+</ul>
+<p>Specialized Major Modes:</p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="HexEdit.html">HexEdit Major Mode</a><ul>
+<li class="toctree-l2"><a class="reference external" href="HexEdit.html#the-editing-window">The Editing Window</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference external" href="HSI.html">Hyperspectral Image Major Mode</a><ul>
+<li class="toctree-l2"><a class="reference external" href="HSI.html#what-is-hyperspectral-imagery">What is Hyperspectral Imagery?</a><ul>
+<li class="toctree-l3"><a class="reference external" href="HSI.html#hyperspectral-image-data">Hyperspectral Image Data</a></li>
+<li class="toctree-l3"><a class="reference external" href="HSI.html#sample-images">Sample Images</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference external" href="HSI.html#hyperspectral-images-in-peppy">Hyperspectral Images in Peppy</a></li>
+<li class="toctree-l2"><a class="reference external" href="HSI.html#starting-hsi-mode">Starting HSI Mode</a></li>
+<li class="toctree-l2"><a class="reference external" href="HSI.html#changing-view-parameters">Changing View Parameters</a></li>
+<li class="toctree-l2"><a class="reference external" href="HSI.html#using-profile-plots">Using Profile Plots</a></li>
+</ul>
+</li>
+</ul>
+<p>* documentation in progress</p>
+
+<a name="indices-and-tables"></a>
+<h1>Indices and tables</h1>
+<ul class="simple">
+<li><a class="reference external" href="genindex.html"><em>Index</em></a></li>
+
+</ul>
+
+</a>
+<table><tr><td width="50%"><p><a href="#">Peppy 0.16.0 User Manual</a> &raquo;</p></td><td width="50%" align="right"><p>
+<a href="intro.html" title="Introduction">next</a> |
+<a href="genindex.html" title="General Index">index</a></p></td></tr></table>
+<div class="footer">
+Updated 24 Feb 2011 by Rob McMullen &lt;robm at flipturn.org&gt;
+</div>
+</body>
+</html>
